@@ -4,19 +4,13 @@
   <meta charset="UTF-8">
   <title>ChordPro Viewer</title>
 
-  <!-- ChordPro Renderer (browser ready) -->
-  <script src="https://cdn.jsdelivr.net/gh/olk90/chordpro-renderer/dist/chordpro-renderer.min.js"></script>
+  <!-- Arquivo JS real, hospedado no GitHub -->
+  <script src="https://rawcdn.githack.com/paulrosen/chordpro-html/master/chordprohtml.js"></script>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-    }
-    .chord {
-      font-weight: bold;
-    }
-    .line {
-      white-space: pre;
     }
   </style>
 </head>
@@ -36,11 +30,7 @@ Seu lou[D]vor esta[G]rá em meus [A]lábios
 
 <script>
   const text = document.getElementById("song").textContent;
-
-  const renderer = new ChordProRenderer();
-  const html = renderer.render(text);
-
-  document.getElementById("output").innerHTML = html;
+  document.getElementById("output").innerHTML = chordprohtml.render(text);
 </script>
 
 </body>
