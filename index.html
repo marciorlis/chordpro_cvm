@@ -4,28 +4,27 @@
   <meta charset="UTF-8">
   <title>ChordPro Viewer</title>
 
-  <!-- ChordPro JS (via CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/chordprojs@3.1.1/dist/chordpro.min.js"></script>
+  <!-- ChordPro Renderer (browser ready) -->
+  <script src="https://cdn.jsdelivr.net/gh/olk90/chordpro-renderer/dist/chordpro-renderer.min.js"></script>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
     }
-    .song {
-      white-space: pre-wrap;
-    }
     .chord {
       font-weight: bold;
-      color: #000;
+    }
+    .line {
+      white-space: pre;
     }
   </style>
 </head>
 <body>
 
-<h2>Cântico exemplo</h2>
+<h2>Bendirei o Senhor</h2>
 
-<pre id="chordpro" class="song">
+<pre id="song">
 {title: Bendirei o Senhor}
 {key: D}
 
@@ -36,11 +35,12 @@ Seu lou[D]vor esta[G]rá em meus [A]lábios
 <div id="output"></div>
 
 <script>
-  const parser = new chordpro.ChordProParser();
-  const song = parser.parse(document.getElementById("chordpro").innerText);
+  const text = document.getElementById("song").textContent;
 
-  const formatter = new chordpro.HtmlTableFormatter();
-  document.getElementById("output").innerHTML = formatter.format(song);
+  const renderer = new ChordProRenderer();
+  const html = renderer.render(text);
+
+  document.getElementById("output").innerHTML = html;
 </script>
 
 </body>
