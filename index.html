@@ -8,6 +8,33 @@
 
   <title>ChordPro CVM</title>
 
+<script>
+fetch('pdf/pdfs.json')
+  .then(res => res.json())
+  .then(lista => {
+
+    // ordena alfabeticamente pelo campo "nome"
+    lista.sort((a, b) =>
+      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
+    );
+
+    const container = document.getElementById('lista-pdfs');
+
+    lista.forEach(item => {
+      const p = document.createElement('p');
+
+      const a = document.createElement('a');
+      a.href = 'pdf/' + item.arquivo;
+      a.textContent = item.nome;
+      a.target = '_blank';
+
+      p.appendChild(a);
+      container.appendChild(p);
+    });
+  });
+</script>
+
+  
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -60,11 +87,8 @@
   <!-- Aqui entra a música com cifras renderizadas -->
   <div id="output"></div>
 
-  <!-- Seu JavaScript de renderização entra aqui -->
-  <script>
-    // Exemplo: aqui você chama a função que renderiza o ChordPro
-    // renderChordPro(conteudo, document.getElementById('output'));
-  </script>
+<div id="lista-pdfs"></div>
+
 
 </body>
 </html>
