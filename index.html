@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ChordPro Viewer</title>
+
+  <!-- ChordPro JS (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chordprojs@3.1.1/dist/chordpro.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .song {
+      white-space: pre-wrap;
+    }
+    .chord {
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Cântico exemplo</h2>
+
+<pre id="chordpro" class="song">
+{title: Bendirei o Senhor}
+{key: D}
+
+[D]Bendirei o Se[G]nhor em todo [A]tempo
+Seu lou[D]vor esta[G]rá em meus [A]lábios
+</pre>
+
+<div id="output"></div>
+
+<script>
+  const parser = new chordpro.ChordProParser();
+  const song = parser.parse(document.getElementById("chordpro").innerText);
+
+  const formatter = new chordpro.HtmlTableFormatter();
+  document.getElementById("output").innerHTML = formatter.format(song);
+</script>
+
+</body>
+</html>
