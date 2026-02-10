@@ -2,15 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>ChordPro Viewer</title>
-
-  <!-- Arquivo JS real, hospedado no GitHub -->
-  <script src="https://rawcdn.githack.com/paulrosen/chordpro-html/master/chordprohtml.js"></script>
+  <title>Cifras</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
+    }
+
+    .line {
+      font-family: monospace;
+      white-space: pre;
+      line-height: 1.6;
+    }
+
+    .chords {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -18,19 +25,44 @@
 
 <h2>Bendirei o Senhor</h2>
 
-<pre id="song">
-{title: Bendirei o Senhor}
-{key: D}
-
+<pre id="source">
 [D]Bendirei o Se[G]nhor em todo [A]tempo
-Seu lou[D]vor esta[G]rá em meus [A]lábios sdsd
+Seu lou[D]vor esta[G]rá em meus [A]lábios
 </pre>
 
 <div id="output"></div>
 
 <script>
-  const text = document.getElementById("song").textContent;
-  document.getElementById("output").innerHTML = chordprohtml.render(text);
+  const src = document.getElementById("source").textContent.trim();
+  const lines = src.split("\n");
+
+  let html = "";
+
+  lines.forEach(line => {
+    let chordLine = "";
+    let lyricLine = "";
+    let i = 0;
+
+    while (i < line.length) {
+      if (line[i] === "[") {
+        const end = line.indexOf("]", i);
+        const chord = line.slice(i + 1, end);
+        chordLine += chord.padEnd(chord.length + 1, " ");
+        i = end + 1;
+      } else {
+        chordLine += " ";
+        lyricLine += line[i];
+        i++;
+      }
+    }
+
+    html += `
+      <div class="line chords">${chordLine}</div>
+      <div class="line">${lyricLine}</div>
+    `;
+  });
+
+  document.getElementById("output").innerHTML = html;
 </script>
 
 </body>
