@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<div id="output">Hinos do domingo 15 de Fevereiro</div>
+<div>Hinos do domingo 15 de Fevereiro</div>
 <h2>Deixa o Salvaor</h2> 
 
 <p>
@@ -32,38 +32,7 @@
   </a>
 </p>
 
-<script>
-  const src = document.getElementById("source").textContent.trim();
-  const lines = src.split("\n");
 
-  let html = "";
-
-  lines.forEach(line => {
-    let chordLine = "";
-    let lyricLine = "";
-    let i = 0;
-
-    while (i < line.length) {
-      if (line[i] === "[") {
-        const end = line.indexOf("]", i);
-        const chord = line.slice(i + 1, end);
-        chordLine += chord.padEnd(chord.length + 1, " ");
-        i = end + 1;
-      } else {
-        chordLine += " ";
-        lyricLine += line[i];
-        i++;
-      }
-    }
-
-    html += `
-      <div class="line chords">${chordLine}</div>
-      <div class="line">${lyricLine}</div>
-    `;
-  });
-
-  document.getElementById("output").innerHTML = html;
-</script>
 
 </body>
 </html>
