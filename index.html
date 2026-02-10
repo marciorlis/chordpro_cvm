@@ -2,37 +2,69 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Cifras</title>
+
+  <!-- ESSENCIAL para celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ChordPro CVM</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
     }
 
-    .line {
-      font-family: monospace;
-      white-space: pre;
-      line-height: 1.6;
+    h1, h2 {
+      line-height: 1.3;
     }
 
-    .chords {
-      font-weight: bold;
+    a {
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Área onde a música renderizada aparece */
+    #output {
+      margin-top: 1.5rem;
+    }
+
+    /* Ajustes específicos para celular */
+    @media (max-width: 600px) {
+      body {
+        margin: 0.8rem;
+        font-size: 1.15rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<div>Hinos do domingo 15 de Fevereiro</div>
-<h2>Deixa o Salvaor</h2> 
+  <h1>Repertório CVM</h1>
 
-<p>
-  <a href="https://marciorlis.github.io/chordpro_cvm/pdf/Deixa%20o%20Salvador%20te%20ajudar%20HC%2010.pdf" target="_blank">
-    Deixa o Salvador te ajudar (HC 10)
-  </a>
-</p>
+  <h2>Hinos do domingo 15 de Fevereiro</h2>
 
+  <p>
+    <a href="https://marciorlis.github.io/chordpro_cvm/pdf/Deixa%20o%20Salvador%20te%20ajudar%20HC%2010.pdf"
+       target="_blank">
+      Deixa o Salvador te ajudar (HC 10)
+    </a>
+  </p>
 
+  <!-- Aqui entra a música com cifras renderizadas -->
+  <div id="output"></div>
+
+  <!-- Seu JavaScript de renderização entra aqui -->
+  <script>
+    // Exemplo: aqui você chama a função que renderiza o ChordPro
+    // renderChordPro(conteudo, document.getElementById('output'));
+  </script>
 
 </body>
 </html>
