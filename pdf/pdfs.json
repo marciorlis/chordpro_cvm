@@ -1,29 +1,36 @@
 [
   {
-    "nome": "Deixa o Salvador te ajudar HC 10",
-    "arquivo": "Deixa o Salvador te ajudar HC 10.pdf"
+    "numero": "HC 01",
+    "nome": "Deixa o Salvador te ajudar HC 01",
+    "arquivo": "Deixa o Salvador te ajudar HC 01.pdf"
   },
   {
+    "numero": "CTP 133",
     "nome": "Maravilhosas graça CTP 133",
     "arquivo": "Maravilhosas graça CTP 133.pdf"
       },
   {
+    "numero": "CTP 143",
     "nome": "Oh! Bem Cego Eu Andei CTP 143",
     "arquivo": "Oh! Bem Cego Eu Andei CTP 143.pdf"
       },
   {
+    "numero": "CTP 297",
     "nome": "Que estou fazendo CTP 297",
     "arquivo": "Que estou fazendo CTP 297.pdf"
       },
   {
+    "numero": "CTP 014",
     "nome": "Santo És Tu, Senhor CTP 014",
     "arquivo": "Santo És Tu, Senhor CTP 014.pdf"
       },
   {
+    "numero": "",
     "nome": "Outro hino",
     "arquivo": "outro-hino.pdf"
       },
   {
+    "numero": "",
     "nome": "Outro hino",
     "arquivo": "outro-hino.pdf"
   }
