@@ -40,7 +40,7 @@ fetch('pdf/pdfs.json')
       return A.numero - B.numero;
     });
 
-    const container = document.getElementById('lista-pdfs');
+    const container = document.getElementById('lista-pdfs-hin');
 
     lista.forEach(item => {
       const p = document.createElement('p');
@@ -102,11 +102,11 @@ fetch('pdf/pdfs.json')
   <!-- Aqui lista todas os pdfs da pasta relacionadas no pdfs.json -->
   <div class="w3-container w3-left w3-khaki">
     <h2>Todos os hinos cifrados</h2>
-<div id="lista-pdfs"></div>
+<div id="lista-pdfs-hin"></div>
 </div>
 
 <a href="index.html">
-  <div class="w3-container w3-center w3-teal">Home</div>
+  <div class="w3-container w3-left w3-teal">Home</div>
 </a>
 
 
