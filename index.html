@@ -33,7 +33,31 @@ fetch('pdf/pdfs.json')
     });
   });
 </script>
+<script>
+fetch('pdf/proxdom.json')
+  .then(res => res.json())
+  .then(lista => {
 
+    // ordena alfabeticamente pelo campo "nome"
+    lista.sort((a, b) =>
+      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
+    );
+
+    const container = document.getElementById('lista-proxdom');
+
+    lista.forEach(item => {
+      const p = document.createElement('p');
+
+      const a = document.createElement('a');
+      a.href = 'pdf/' + item.arquivo;
+      a.textContent = item.nome;
+      a.target = '_blank';
+
+      p.appendChild(a);
+      container.appendChild(p);
+    });
+  });
+</script>
   
   <style>
     body {
@@ -74,17 +98,12 @@ fetch('pdf/pdfs.json')
 <body>
 
   <h1>Repertório - CVM</h1>
+  <div><hr></div>
+    <!-- Aqui lista os pdfs relacionadas no proxdom.json -->
+  <h2>Hinos do próximo domingo</h2>
+<div id="lista-proxdom"></div>
 
-  <h2>Hinos do domingo 15 de Fevereiro</h2>
-
-  <p>
-    <a href="https://marciorlis.github.io/chordpro_cvm/pdf/Deixa%20o%20Salvador%20te%20ajudar%20HC%2010.pdf"
-       target="_blank">
-      Deixa o Salvador te ajudar (HC 10)
-    </a>
-  </p>
-
-  <!-- Aqui entra a música com cifras renderizadas -->
+  <!-- Aqui lista todas os pdfs da pasta relacionadas no pdfs.json -->
   <div><hr></div>
     <h2>Todos os hinos cifrados</h2>
 <div id="lista-pdfs"></div>
