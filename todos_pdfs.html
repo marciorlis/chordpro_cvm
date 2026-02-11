@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ESSENCIAL para celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <title>CVM - Músicos</title>
+
+<script>
+fetch('pdf/pdfs.json')
+  .then(res => res.json())
+  .then(lista => {
+
+    // ordena alfabeticamente pelo campo "nome"
+    lista.sort((a, b) =>
+      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
+    );
+
+    const container = document.getElementById('lista-pdfs');
+
+    lista.forEach(item => {
+      const p = document.createElement('p');
+
+      const a = document.createElement('a');
+      a.href = 'pdf/' + item.arquivo;
+      a.textContent = item.nome;
+      a.target = '_blank';
+
+      p.appendChild(a);
+      container.appendChild(p);
+    });
+  });
+</script>
+<script>
+fetch('pdf/proxdom.json')
+  .then(res => res.json())
+  .then(lista => {
+
+    // ordena alfabeticamente pelo campo "nome"
+    lista.sort((a, b) =>
+      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
+    );
+
+    const container = document.getElementById('lista-proxdom');
+
+    lista.forEach(item => {
+      const p = document.createElement('p');
+
+      const a = document.createElement('a');
+      a.href = 'pdf/' + item.arquivo;
+      a.textContent = item.nome;
+      a.target = '_blank';
+
+      p.appendChild(a);
+      container.appendChild(p);
+    });
+  });
+</script>
+  
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+      line-height: 1.3;
+    }
+
+    a {
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Área onde a música renderizada aparece */
+    #output {
+      margin-top: 1.5rem;
+    }
+
+    /* Ajustes específicos para celular */
+    @media (max-width: 600px) {
+      body {
+        margin: 0.8rem;
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="w3-panel w3-pink">
+  <h1 class="w3-opacity"><b>CVM | Repertório</b></h1>
+</div>
+
+
+  <!-- Aqui lista todas os pdfs da pasta relacionadas no pdfs.json -->
+  <div class="w3-container w3-center w3-khaki">
+    <h2>Todos os hinos cifrados</h2>
+<div id="lista-pdfs"></div>
+</div>
+  <div class="w3-container w3-center w3-teal">
+    <!-- Aqui lista os pdfs relacionadas no proxdom.json -->
+  <h2>Hinos do próximo domingo</h2>
+<div>Home</div>
+</div>
+</body>
+</html>
