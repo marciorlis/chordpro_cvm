@@ -6,17 +6,39 @@
   <!-- ESSENCIAL para celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <title>CVM - Músicos</title>
+  <title>Todas as Cifras</title>
+
+
 
 <script>
 fetch('pdf/pdfs.json')
   .then(res => res.json())
   .then(lista => {
 
-    // ordena alfabeticamente pelo campo "nome"
-    lista.sort((a, b) =>
-      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
-    );
+    // função para separar prefixo e número
+    function separarNumero(valor) {
+      const match = valor.match(/^([^\d]+)\s*(\d+)/i);
+      return {
+        prefixo: match ? match[1].trim() : '',
+        numero: match ? parseInt(match[2]) : 0
+      };
+    }
+
+    // ordena por prefixo + número
+    lista.sort((a, b) => {
+      const A = separarNumero(a.numero);
+      const B = separarNumero(b.numero);
+
+      // primeiro: prefixo (ordem alfabética pt-BR)
+      const compPrefixo = A.prefixo.localeCompare(B.prefixo, 'pt-BR', {
+        sensitivity: 'base'
+      });
+
+      if (compPrefixo !== 0) return compPrefixo;
+
+      // segundo: número
+      return A.numero - B.numero;
+    });
 
     const container = document.getElementById('lista-pdfs');
 
@@ -25,7 +47,7 @@ fetch('pdf/pdfs.json')
 
       const a = document.createElement('a');
       a.href = 'pdf/' + item.arquivo;
-      a.textContent = item.nome;
+      a.textContent = `${item.numero} — ${item.nome}`;
       a.target = '_blank';
 
       p.appendChild(a);
@@ -33,31 +55,7 @@ fetch('pdf/pdfs.json')
     });
   });
 </script>
-<script>
-fetch('pdf/proxdom.json')
-  .then(res => res.json())
-  .then(lista => {
 
-    // ordena alfabeticamente pelo campo "nome"
-    lista.sort((a, b) =>
-      a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
-    );
-
-    const container = document.getElementById('lista-proxdom');
-
-    lista.forEach(item => {
-      const p = document.createElement('p');
-
-      const a = document.createElement('a');
-      a.href = 'pdf/' + item.arquivo;
-      a.textContent = item.nome;
-      a.target = '_blank';
-
-      p.appendChild(a);
-      container.appendChild(p);
-    });
-  });
-</script>
   
   <style>
     body {
