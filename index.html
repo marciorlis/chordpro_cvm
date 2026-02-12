@@ -43,7 +43,7 @@ fetch('pdf/proxdom.json')
       a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
     );
 
-    const container = document.getElementById('lista-proxdom');
+    const container = document.getElementById('lista-proxdomx');
 
     lista.forEach(item => {
       const p = document.createElement('p');
@@ -58,6 +58,62 @@ fetch('pdf/proxdom.json')
     });
   });
 </script>
+
+<script>
+fetch('pdf/pdfs.json')
+  .then(res => res.json())
+  .then(dados => {
+
+    const container = document.getElementById('lista-proxdom');
+
+    // cria título com data
+    const titulo = document.createElement('h3');
+
+    const dataFormatada = new Date(dados.data)
+      .toLocaleDateString('pt-BR');
+
+    titulo.textContent = `${dados.titulo} ${dataFormatada}`;
+    container.appendChild(titulo);
+
+    const lista = dados.hinos;
+
+    // (se quiser manter ordenação por prefixo + número)
+    function separarNumero(valor) {
+      const match = valor.match(/^([^\d]+)\s*(\d+)/i);
+      return {
+        prefixo: match ? match[1].trim() : '',
+        numero: match ? parseInt(match[2]) : 0
+      };
+    }
+
+    lista.sort((a, b) => {
+      const A = separarNumero(a.numero);
+      const B = separarNumero(b.numero);
+
+      const compPrefixo = A.prefixo.localeCompare(B.prefixo, 'pt-BR', {
+        sensitivity: 'base'
+      });
+
+      if (compPrefixo !== 0) return compPrefixo;
+      return A.numero - B.numero;
+    });
+
+    // cria lista de hinos
+    lista.forEach(item => {
+      const p = document.createElement('p');
+
+      const a = document.createElement('a');
+      a.href = 'pdf/' + item.arquivo;
+      a.textContent = `${item.nome} — ${item.numero}`;
+      a.target = '_blank';
+
+      p.appendChild(a);
+      container.appendChild(p);
+    });
+
+  });
+</script>
+ 
   
   <style>
     body {
