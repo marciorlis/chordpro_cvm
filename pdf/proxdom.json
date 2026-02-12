@@ -1,4 +1,7 @@
-[
+{
+  "data": "2026-02-15",
+  "titulo": "Hinos do próximo domingo",
+  "hinos": [
   {
     "numero": "HC 05",
     "nome": "Brillha em Nós HC 05",
@@ -25,3 +28,4 @@
     "arquivo": "outro-hino.pdf"
   }
 ]
+}
