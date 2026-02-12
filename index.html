@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <title>CVM - Músicos</title>
 
+
+  
 <script>
 fetch('pdf/pdfs.json')
   .then(res => res.json())
@@ -138,6 +140,7 @@ fetch('pdf/proxdom.json')
       text-decoration: underline;
     }
 
+    
     /* Área onde a música renderizada aparece */
     #output {
       margin-top: 1.5rem;
@@ -168,6 +171,15 @@ fetch('pdf/proxdom.json')
 <a href="todos_pdfs.html">
   <div class="w3-container w3-center w3-cyan"><h1>Índices de todos os hinos cifrados</h1></div>
 </a>
-
+<!-- visualizador PDF -->
+<div id="viewer">
+  <iframe id="pdfFrame" width="100%" height="600"></iframe>
+</div>
+<script>
+  a.onclick = function(e) {
+  e.preventDefault();
+  document.getElementById('pdfFrame').src = a.href;
+};
+</script>
 </body>
 </html>
