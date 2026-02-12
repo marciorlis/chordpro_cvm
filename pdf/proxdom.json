@@ -2,30 +2,25 @@
   "data": "2026-02-15",
   "titulo": "Hinos do próximo domingo",
   "hinos": [
-  {
-    "numero": "HC 05",
-    "nome": "Brillha em Nós HC 05",
-    "arquivo": "Brillha em Nós HC 05.pdf"
-      },
-  {
-    "numero": "CTP 020",
-    "nome": "Brilha Jesus CTP 020",
-    "arquivo": "Brilha Jesus CTP 020.pdf"
+    {
+      "numero": "HC 05",
+      "nome": "Brilha em Nós",
+      "arquivo": "Brilha em Nós HC 05.pdf"
     },
-  {
-    "numero": "CTP 063",
-    "nome": "Tu es fiel Senhor CTP 063",
-    "arquivo": "Tu es fiel Senhor CTP 063.pdf"
+    {
+      "numero": "CTP 020",
+      "nome": "Brilha Jesus",
+      "arquivo": "Brilha Jesus CTP 020.pdf"
     },
-  {
-    "numero": "CTP 041",
-    "nome": "Se Confessarmos CTP 041",
-    "arquivo": "Se Confessarmos CTP 041.pdf"
+    {
+      "numero": "CTP 063",
+      "nome": "Tu és fiel Senhor",
+      "arquivo": "Tu es fiel Senhor CTP 063.pdf"
     },
-  {
-    "numero": "",
-    "nome": "",
-    "arquivo": "outro-hino.pdf"
-  }
-]
+    {
+      "numero": "CTP 041",
+      "nome": "Se Confessarmos",
+      "arquivo": "Se Confessarmos CTP 041.pdf"
+    }
+  ]
 }
