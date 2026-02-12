@@ -33,12 +33,14 @@ fetch('pdf/pdfs.json')
     });
   });
 </script>
+
+      
 <script>
-fetch('pdf/proxdom.json')
+fetch('pdf/proxdomx.json')
   .then(res => res.json())
   .then(lista => {
 
-    // ordena alfabeticamente pelo campo "nome"
+    // apresebta os u=hinos do proximo domingo
     lista.sort((a, b) =>
       a.nome.localeCompare(b.nome, 'pt-BR', { sensitivity: 'base' })
     );
@@ -60,7 +62,7 @@ fetch('pdf/proxdom.json')
 </script>
 
 <script>
-fetch('pdf/pdfs.json')
+fetch('pdf/proxdom.json')
   .then(res => res.json())
   .then(dados => {
 
