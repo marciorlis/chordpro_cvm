@@ -11,6 +11,8 @@
 
   
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
 fetch('pdf/pdfs.json')
   .then(res => res.json())
   .then(lista => {
@@ -42,10 +44,13 @@ a.onclick = function(e) {
       container.appendChild(p);
     });
   });
+});
 </script>
 
       
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
 fetch('pdf/proxdomx.json')
   .then(res => res.json())
   .then(lista => {
@@ -77,9 +82,12 @@ a.onclick = function(e) {
       container.appendChild(p);
     });
   });
+});
 </script>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
 fetch('pdf/proxdom.json')
   .then(res => res.json())
   .then(dados => {
@@ -140,6 +148,7 @@ a.onclick = function(e) {
     });
 
   });
+});
 </script>
  
   
