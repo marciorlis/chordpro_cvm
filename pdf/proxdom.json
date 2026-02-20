@@ -2,25 +2,25 @@
   "data": "2026-02-15",
   "titulo": "",
   "hinos": [
+  {
+    "numero": "CTP 368",
+    "nome": "Rude Cruz CTP368",
+    "arquivo": "Rude Cruz CTP368.pdf"
+  },
     {
-      "numero": "HC 05",
-      "nome": "Brilha em Nós",
-      "arquivo": "Brilha em Nos HC 05.pdf"
-    },
+    "numero": "CTP 052",
+    "nome": "A Deus Demos Glória CTP 052",
+    "arquivo": "A Deus Demos Glória CTP 052.pdf"
+  },
     {
-      "numero": "CTP 020",
-      "nome": "Brilha Jesus",
-      "arquivo": "Brilha Jesus CTP 020.pdf"
-    },
-    {
-      "numero": "CTP 063",
-      "nome": "Tu és fiel Senhor",
-      "arquivo": "Tu es fiel Senhor CTP 063.pdf"
-    },
-    {
-      "numero": "CTP 041",
-      "nome": "Se Confessarmos",
-      "arquivo": "Se Confessarmos CTP 041.pdf"
-    }
+    "numero": "HC 04",
+    "nome": "De mim te lembres, Senhor HC04",
+    "arquivo": "De mim te lembres, Senhor HC04.pdf"
+  },
+  {
+    "numero": "HC 08",
+    "nome": "Fonte Divina da Caridade HC08 SL248",
+    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
+  }
   ]
 }
