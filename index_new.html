@@ -97,8 +97,10 @@ fetch('pdf/proxdom.json')
     // cria título com data
     const titulo = document.createElement('h3');
 
-    const dataFormatada = new Date(dados.data)
-      .toLocaleDateString('pt-BR');
+const [ano, mes, dia] = dados.data.split('-');
+const dataLocal = new Date(ano, mes - 1, dia);
+
+const dataFormatada = dataLocal.toLocaleDateString('pt-BR');
 
     titulo.textContent = `${dados.titulo} ${dataFormatada}`;
     container.appendChild(titulo);
