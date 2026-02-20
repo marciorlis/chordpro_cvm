@@ -10,10 +10,10 @@
 <script>
 function abrirPDF(url) {
 
-  // transforma em URL absoluta
-  const urlCompleta = window.location.origin + "/" + url;
+  // usa caminho completo da página atual
+  const base = window.location.href.replace(/\/[^\/]*$/, '/');
+  const urlCompleta = base + url;
 
-  // usa visualizador universal (compatível com celular)
   const viewerURL =
     "https://docs.google.com/gview?embedded=true&url=" +
     encodeURIComponent(urlCompleta);
