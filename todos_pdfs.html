@@ -8,7 +8,30 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <title>Todas as Cifras</title>
 
+<!-- a função global abrirPDF() -->
 <script>
+function abrirPDF(url) {
+
+  const base = window.location.href.replace(/\/[^\/]*$/, '/');
+  const urlCompleta = base + url;
+
+  const viewerURL =
+    "https://docs.google.com/gview?embedded=true&url=" +
+    encodeURIComponent(urlCompleta);
+
+  document.getElementById('pdfFrame').src = viewerURL;
+
+  document.getElementById('viewer').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+</script>
+  
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  // fetch aqui dentro
+
 fetch('pdf/pdfs.json')
   .then(res => res.json())
   .then(lista => {
@@ -26,16 +49,23 @@ fetch('pdf/pdfs.json')
       const a = document.createElement('a');
       a.href = 'pdf/' + item.arquivo;
       a.textContent = item.nome;
-      a.target = '_blank';
+      a.onclick = function(e) {
+        e.preventDefault();
+        abrirPDF(this.getAttribute('href'));
+      };
 
       p.appendChild(a);
       container.appendChild(p);
     });
   });
+  
+});
 </script>
 
 <script>
-fetch('pdf/pdfs.json')
+document.addEventListener('DOMContentLoaded', () => {
+  // fetch aqui dentro
+  fetch('pdf/pdfs.json')
   .then(res => res.json())
   .then(lista => {
 
@@ -72,12 +102,17 @@ fetch('pdf/pdfs.json')
       const a = document.createElement('a');
       a.href = 'pdf/' + item.arquivo;
       a.textContent = `${item.numero} — ${item.nome}`;
-      a.target = '_blank';
-
+      a.onclick = function(e) {
+        e.preventDefault();
+        abrirPDF(this.getAttribute('href'));
+      };
+      
       p.appendChild(a);
       container.appendChild(p);
     });
   });
+});
+
 </script>
 
   
@@ -136,7 +171,11 @@ fetch('pdf/pdfs.json')
 <div id="lista-pdfs-hin"></div>
 </div>
 
-
+<div id="viewer" class="w3-container" style="margin-top:20px;">
+  <iframe id="pdfFrame"
+    style="width:100%; height:90vh; border:none;">
+  </iframe>
+</div>
 
 
 </body>
