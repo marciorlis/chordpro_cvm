@@ -1,17 +1,21 @@
 {
-  "data": "2026-02-22",
+  "data": "<i>2026-03-01</i>",
   "titulo": "",
   "hinos": [
   {
-    "numero": "CTP 368",
-    "nome": "Rude Cruz CTP368",
-    "arquivo": "Rude Cruz CTP368.pdf"
+    "numero": "CTP 112",
+    "nome": "Preciosa Graça CTP 112",
+    "arquivo": "Preciosa Graça CTP 112.pdf"
   },
     {
-    "numero": "CTP 052",
-    "nome": "A Deus Demos Glória CTP 052",
-    "arquivo": "A Deus Demos Glória CTP 052.pdf"
+    "numero": "CTP 464",
+    "nome": "Tem piedade de nós CTP 464",
+    "arquivo": "Tem piedade de nós CTP 464.pdf"
   },
+    {
+    "numero": "CTP 264",
+    "nome": "Plenitude de Vida CTP 264",
+    "arquivo": "Plenitude de Vida CTP 264.pdf"  },
     {
     "numero": "HC 04",
     "nome": "De mim te lembres, Senhor HC04",
