@@ -3,11 +3,16 @@
   "titulo": "",
   "hinos": [
   {
+    "numero": "AVU 01",
+    "nome": "Ao Meu Redor AVU 01",
+    "arquivo": "Ao Meu Redor AVU 01.pdf"
+  },
+  {
     "numero": "CTP 112",
     "nome": "Preciosa Graça CTP 112",
     "arquivo": "Preciosa Graça CTP 112.pdf"
   },
-    {
+  {
     "numero": "CTP 464",
     "nome": "Tem piedade de nós CTP 464",
     "arquivo": "Tem piedade de nós CTP 464.pdf"
