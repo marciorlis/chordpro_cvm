@@ -1,31 +1,31 @@
 {
-  "data": "2026-03-15",
+  "data": "2026-03-22",
   "titulo": "",
   "hinos": [
   {
-    "numero": "CTP 001",
-    "nome": "Adorai em majestade CTP 001",
-    "arquivo": "Adorai em majestade CTP 001.pdf"
+    "numero": "CTP 468",
+    "nome": "Pelas Dores Deste Mundo CTP 468",
+    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
   },
   {
-    "numero": "CTP 225",
-    "nome": "Graças Dou, Sim, Pela vida CTP 225",
-    "arquivo": "Graças Dou, Sim, Pela vida CTP 225.pdf"
+    "numero": "CTP 487",
+    "nome": "Ao Que Está Sentado no Trono CTP 487",
+    "arquivo": "Ao Que Está Sentado no Trono CTP 487.pdf"
   },
   {
-    "numero": "HC08 SL248",
-    "nome": "Fonte Divina da Caridade HC08 SL248",
-    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
+    "numero": "CTP 294",
+    "nome": "Ó Senhor, vem me dirigir CTP 294",
+    "arquivo": "Ó Senhor, vem me dirigir CTP 294.pdf"
   },
     {
-    "numero": "AVU 01",
-    "nome": "Ao Meu Redor AVU 01",
-    "arquivo": "Ao Meu Redor AVU 01.pdf"
+    "numero": "AVU02",
+    "nome": "Ele É Exaltado AVU02",
+    "arquivo": "Ele É Exaltado AVU02.pdf"
   },
   {
-    "numero": "CTP 412",
-    "nome": "Um Pendão Real CTP 412",
-    "arquivo": "Um Pendão Real CTP 412.pdf"
+    "numero": "AVU03",
+    "nome": "Não Há Deus Maior AVU03",
+    "arquivo": "Não Há Deus Maior AVU03.pdf"
   }
   ]
 }
