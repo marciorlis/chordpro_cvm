@@ -1,16 +1,16 @@
 {
-  "data": "2026-03-22",
+  "data": "2026-03-29",
   "titulo": "",
   "hinos": [
   {
-    "numero": "CTP 014",
-    "nome": "Santo És Tu, Senhor CTP 014",
-    "arquivo": "Santo És Tu, Senhor CTP 014.pdf"
+    "numero": "CTP 051",
+    "nome": "Cantai e folgai CTP 051",
+    "arquivo": "Cantai e folgai CTP 051.pdf"
   },
     {
-    "numero": "HC 01",
-    "nome": "Deixa o Salvador te ajudar HC 01",
-    "arquivo": "Deixa o Salvador te ajudar HC 01.pdf"
+    "numero": "CTP364",
+    "nome": "Ao Contemplar a Tua Cruz CTP364",
+    "arquivo": "Ao Contemplar a Tua Cruz CTP364.pdf"
   },
   {
     "numero": "CTP 468",
@@ -18,24 +18,24 @@
     "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
   },
   {
-    "numero": "CTP 487",
-    "nome": "Ao Que Está Sentado no Trono CTP 487",
-    "arquivo": "Ao Que Está Sentado no Trono CTP 487.pdf"
+    "numero": "CTP 363",
+    "nome": "Por meus delitos expirou CTP 363",
+    "arquivo": "Por meus delitos expirou CTP 363.pdf"
   },
   {
-    "numero": "CTP 294",
-    "nome": "Ó Senhor, vem me dirigir CTP 294",
-    "arquivo": "Ó Senhor, vem me dirigir CTP 294.pdf"
+    "numero": "AVU04",
+    "nome": "Tu és Soberano AVU04",
+    "arquivo": "Tu és Soberano AVU04.pdf"
   },
     {
-    "numero": "AVU02",
-    "nome": "Ele É Exaltado AVU02",
-    "arquivo": "Ele É Exaltado AVU02.pdf"
+    "numero": "CTP 021",
+    "nome": "ao unico - em elaboraçao",
+    "arquivo": "Ao Único Que É Digno CTP 021.pdf"
   },
   {
-    "numero": "AVU03",
-    "nome": "Não Há Deus Maior AVU03",
-    "arquivo": "Não Há Deus Maior AVU03.pdf"
+    "numero": "",
+    "nome": "Vem agora, Sanato Espirito - em elaboração",
+    "arquivo": "xx.pdf"
   }
   ]
 }
