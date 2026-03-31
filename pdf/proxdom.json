@@ -1,36 +1,37 @@
 {
-  "data": "2026-03-29",
+  "data": "2026-04-05",
   "titulo": "",
   "hinos": [
+    {
+    "numero": "HC 18",
+    "nome": "Adoro o Cristo vivo HC 18",
+    "arquivo": "Adoro o Cristo vivo HC 18.pdf"
+  },
   {
-    "numero": "CTP 051",
-    "nome": "Cantai e folgai CTP 051",
-    "arquivo": "Cantai e folgai CTP 051.pdf"
+    "numero": "HC 02",
+    "nome": "Porque ele vive HC 02",
+    "arquivo": "Porque ele vive HC 02.pdf"
+  },
+  {
+    "numero": "HC 07",
+    "nome": "De três verdades HC 07",
+    "arquivo": "De três verdades HC 07.pdf"
+  },
+  {
+    "numero": "CTP 184",
+    "nome": "Comigo Estar! CTP 184",
+    "arquivo": "Comigo Estar! CTP 184.pdf"
   },
     {
-    "numero": "CTP364",
-    "nome": "Ao Contemplar a Tua Cruz CTP364",
-    "arquivo": "Ao Contemplar a Tua Cruz CTP364.pdf"
-  },
-  {
-    "numero": "CTP 468",
-    "nome": "Pelas Dores Deste Mundo CTP 468",
-    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
-  },
-  {
-    "numero": "CTP 363",
-    "nome": "Por meus delitos expirou CTP 363",
-    "arquivo": "Por meus delitos expirou CTP 363.pdf"
-  },
-  {
-    "numero": "AVU04",
-    "nome": "Tu és Soberano AVU04",
-    "arquivo": "Tu és Soberano AVU04.pdf"
-  },
-    {
-    "numero": "CTP 021",
-    "nome": "Ao Único Que É Digno CTP 021",
-    "arquivo": "Ao Único Que É Digno CTP 021.pdf"
+    "numero": "CTP 065",
+    "nome": "Glória pra sempre CTP 065",
+    "arquivo": "Glória pra sempre CTP 065.pdf"
   }
   ]
 }
+
+
+
+
+
+
