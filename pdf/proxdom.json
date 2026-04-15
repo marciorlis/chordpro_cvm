@@ -1,32 +1,37 @@
 
   {
-  "data": "2026-04-12",
+  "data": "2026-04-19",
   "titulo": "",
   "hinos": [
-    {
-    "numero": "CTP 034",
-    "nome": "Santo! Santo! Santo!",
-    "arquivo": "Santo! Santo! Santo! CTP 034.pdf"
-  },
   {
     "numero": "CTP 146",
     "nome": "O Dia da Vitória",
     "arquivo": "O Dia da Vitória CTP 146.pdf"
   },
   {
-    "numero": "HC 07",
-    "nome": "De três verdades HC 07",
-    "arquivo": "De três verdades HC 07.pdf"
+    "numero": "CTP 184",
+    "nome": "Comigo Estar!",
+    "arquivo": "Comigo Estar! CTP 184.pdf"
   },
   {
-    "numero": "CTP 220",
-    "nome": "Ao orarmos, Senhor",
-    "arquivo": "Ao orarmos, Senhor CTP 220.pdf"
+    "numero": "CTP 093",
+    "nome": "Cantai a Cristo",
+    "arquivo": "Cantai a Cristo CTP 093.pdf"
   },
-    {
-    "numero": "AVU 06",
-    "nome": "Eu te Busco",
-    "arquivo": "Eu te Busco AVU06.pdf"
+  {
+    "numero": "CTP 499",
+    "nome": "Caminhemos pela luz de Deus",
+    "arquivo": "Caminhemos pela luz de Deus CTP 499.pdf"
+  },
+  {
+    "numero": "CTP 050",
+    "nome": "A alegria está no coração",
+    "arquivo": "A alegria está no coração CTP 050.pdf"
+  },
+  {
+    "numero": "CTP 043",
+    "nome": "Deus está presente",
+    "arquivo": "Deus está presente CTP 043.pdf"
   }
   ]
 }
