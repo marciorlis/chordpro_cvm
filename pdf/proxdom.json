@@ -1,6 +1,6 @@
 
   {
-  "data": "2026-04-19",
+  "data": "2026-04-26",
   "titulo": "",
   "hinos": [
   {
@@ -9,29 +9,19 @@
     "arquivo": "O Dia da Vitória CTP 146.pdf"
   },
   {
-    "numero": "CTP 184",
-    "nome": "Comigo Estar!",
-    "arquivo": "Comigo Estar! CTP 184.pdf"
-  },
-  {
-    "numero": "CTP 093",
-    "nome": "Cantai a Cristo",
-    "arquivo": "Cantai a Cristo CTP 093.pdf"
-  },
-  {
     "numero": "CTP 499",
     "nome": "Caminhemos pela luz de Deus",
     "arquivo": "Caminhemos pela luz de Deus CTP 499.pdf"
   },
   {
-    "numero": "CTP 050",
-    "nome": "A alegria está no coração",
-    "arquivo": "A alegria está no coração CTP 050.pdf"
+    "numero": "CTP 468",
+    "nome": "Pelas Dores Deste Mundo CTP 468",
+    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
   },
   {
-    "numero": "CTP 043",
-    "nome": "Deus está presente",
-    "arquivo": "Deus está presente CTP 043.pdf"
+    "numero": "CTP 118",
+    "nome": "Amor perene CTP 118",
+    "arquivo": "Amor perene CTP 118.pdf"
   }
   ]
 }
