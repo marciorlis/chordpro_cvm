@@ -1,6 +1,6 @@
 
   {
-  "data": "2026-05-03",
+  "data": "2026-05-10",
   "titulo": "",
   "hinos": [
   {
@@ -19,23 +19,23 @@
     "arquivo": "Tocou-me  HC 12.pdf"
   },
   {
-    "numero": "HC 08",
-    "nome": "Fonte Divina da Caridade HC08 SL248",
-    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
+    "numero": "CTP 468",
+    "nome": "Pelas Dores Deste Mundo CTP 468",
+    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
+  },
+ {
+    "numero": "CTP 133",
+    "nome": "Maravilhosas graça CTP 133",
+    "arquivo": "Maravilhosas graça CTP 133.pdf"
   },
   {
-    "numero": "CTP 264",
-    "nome": "Plenitude de Vida CTP 264",
-    "arquivo": "Plenitude de Vida CTP 264.pdf"
-  },
-  {
-    "numero": "HC 18",
-    "nome": "Adoro o Cristo vivo HC 18",
-    "arquivo": "Adoro o Cristo vivo HC 18.pdf"
-  },    
+    "numero": "AVU 06",
+    "nome": "Eu te Busco AVU 06",
+    "arquivo": "Eu te Busco AVU 06.pdf"
+  },  
   {
     "numero": "CTP 056",
-    "nome": " X PARA ENSAIO COM CORAL - Ao Deus de Abraão Louvai CTP 056",
+    "nome": " ENSAIO COM CORAL - Ao Deus de Abraão Louvai CTP 056",
     "arquivo": "Ao Deus de Abraão Louvai CTP 056.pdf"
   }  ]
 }
