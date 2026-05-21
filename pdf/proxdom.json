@@ -4,35 +4,35 @@
   "titulo": "",
   "hinos": [
   {
-    "numero": "CTP 438",
-    "nome": "Amém Afro-americano CTP 438",
-    "arquivo": "Amém Afro-americano CTP 438.pdf"
+    "numero": "HC 44",
+    "nome": "ENSAIO COM CORAL - Oração Pela Família HC 44",
+    "arquivo": "Oração Pela Família HC 44.pdf"
   },
+  {
+    "numero": "HC 38",
+    "nome": "Oh! Não consintas tristezas HC 38",
+    "arquivo": "Oh! Não consintas tristezas HC 38.pdf"
+  },  
+  {
+    "numero": "CTP 408",
+    "nome": "Vem, Santo Espírito CTP 408",
+    "arquivo": "Vem, Santo Espírito CTP 408.pdf"
+  },   
+  {
+    "numero": "CTP 035",
+    "nome": "Vem, Espírito Divino CTP 035",
+    "arquivo": "Vem, Espírito Divino CTP 035.pdf"
+  }, 
   {
     "numero": "AVU 08",
     "nome": "O rosto de Cristo AVU 08",
     "arquivo": "O rosto de Cristo AVU 08.pdf"
   },
   {
-    "numero": "CTP 239",
-    "nome": "Quero Chegar ao Teu Rio CTP 239",
-    "arquivo": "Quero Chegar ao Teu Rio CTP 239.pdf"
+    "numero": "CTP 294",
+    "nome": "Ó Senhor, vem me dirigir CTP 294",
+    "arquivo": "Ó Senhor, vem me dirigir CTP 294.pdf"
   },
-  {
-    "numero": "CTP 232",
-    "nome": "Em tudo as tuas mãos CTP 232",
-    "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
-  },
- {
-    "numero": "HC08",
-    "nome": "Fonte Divina da Caridade HC08 SL248",
-    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
-  },
-  {
-    "numero": "CTP 176",
-    "nome": "Que Vista Amável é CTP 176",
-    "arquivo": "Que Vista Amável é CTP 176.pdf"
-  },  
   {
     "numero": "CTP 379",
     "nome": "Santo Espírito enche a minha vida CTP 379",
@@ -40,7 +40,7 @@
   },  
   {
     "numero": "CTP 056",
-    "nome": " ENSAIO COM CORAL - Ao Deus de Abraão Louvai CTP 056",
+    "nome": "ENSAIO COM CORAL - Ao Deus de Abraão Louvai CTP 056",
     "arquivo": "Ao Deus de Abraão Louvai CTP 056.pdf"
   }  ]
 }
