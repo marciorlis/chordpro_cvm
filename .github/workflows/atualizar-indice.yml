@@ -1,1 +1,39 @@
+name: Atualizar índice de hinos
 
+on:
+  push:
+    paths:
+      - 'pdf/**'
+
+jobs:
+  gerar-json:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Gerar hinos.json
+        run: node scripts/gerar-json.js
+
+      - name: Salvar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add hinos.json
+
+          if git diff --staged --quiet; then
+            echo "Nenhuma alteração."
+          else
+            git commit -m "Atualização automática do índice"
+            git push
+          fi
