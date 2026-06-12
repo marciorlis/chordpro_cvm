@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Índice de Hinos</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+h1,h2{
+    color:#333;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:4px;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Índice de Hinos</h1>
+
+<input
+id="busca"
+type="text"
+placeholder="Pesquisar hino..."
+onkeyup="filtrar()"
+/>
+
+<h2>Ordem Alfabética</h2>
+
+<ul id="alfabetico"></ul>
+
+<hr>
+
+<h2>Por Hinário</h2>
+
+<h3>AVU</h3>
+<ul id="AVU"></ul>
+
+<h3>CTP</h3>
+<ul id="CTP"></ul>
+
+<h3>HC</h3>
+<ul id="HC"></ul>
+
+<script>
+
+let todos = [];
+
+fetch("hinos.json")
+.then(r=>r.json())
+.then(lista=>{
+
+    todos = lista;
+
+    montar();
+
+});
+
+function montar(){
+
+    let alfa = document.getElementById("alfabetico");
+
+    alfa.innerHTML="";
+
+    document.getElementById("AVU").innerHTML="";
+    document.getElementById("CTP").innerHTML="";
+    document.getElementById("HC").innerHTML="";
+
+    let filtro =
+    document.getElementById("busca")
+    .value
+    .toLowerCase();
+
+    let lista = todos.filter(h=>{
+
+        return (
+            h.titulo.toLowerCase().includes(filtro)
+            ||
+            h.hinario.toLowerCase().includes(filtro)
+            ||
+            String(h.numero).includes(filtro)
+        );
+
+    });
+
+    lista
+    .sort((a,b)=>
+    a.titulo.localeCompare(
+    b.titulo,
+    "pt-BR"))
+    .forEach(h=>{
+
+        alfa.innerHTML +=
+        `<li>
+        <a href="pdf/${encodeURIComponent(h.arquivo)}" target="_blank">
+        ${h.titulo}
+        </a>
+        (${h.hinario} ${h.numero})
+        </li>`;
+
+    });
+
+    ["AVU","CTP","HC"].forEach(sigla=>{
+
+        lista
+        .filter(h=>h.hinario==sigla)
+        .sort((a,b)=>a.numero-b.numero)
+        .forEach(h=>{
+
+            document
+            .getElementById(sigla)
+            .innerHTML +=
+
+            `<li>
+            <a href="pdf/${encodeURIComponent(h.arquivo)}" target="_blank">
+            ${h.numero} - ${h.titulo}
+            </a>
+            </li>`;
+
+        });
+
+    });
+
+}
+
+function filtrar(){
+
+    montar();
+
+}
+
+</script>
+
+</body>
+
+</html>
