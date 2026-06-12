@@ -1,48 +1,43 @@
 
   {
-  "data": "2026-06-07",
+  "data": "2026-06-14",
   "titulo": "",
   "hinos": [
   {
-    "numero": "AVU 09",
-    "nome": "A Ele a Glória AVU 09",
-    "arquivo": "A Ele a Glória AVU 09.pdf"
+    "numero": "AVU 10",
+    "nome": "Hino pela Igreja Perseguida AVU 10",
+    "arquivo": "Hino pela Igreja Perseguida AVU 10.pdf"
   },
   {
-    "numero": "HC 03",
-    "nome": "Vivi tão Longe do Senhor HC 03",
-    "arquivo": "Vivi tão Longe do Senhor HC 03.pdf"
-  },  
-  {
-    "numero": "CTP 231",
-    "nome": "Conta as bênçãos CTP 231",
-    "arquivo": "Conta as bênçãos CTP 231.pdf"
-  },  
-  {
-    "numero": "CTP 186",
-    "nome": "Oh! Que paz Jesus me dá CTP 186",
-    "arquivo": "Oh! Que paz Jesus me dá CTP 186.pdf"
+    "numero": "CTP 300",
+    "nome": "O Espírito do Senhor CTP 300",
+    "arquivo": "O Espírito do Senhor CTP 300.pdf"
   },
   {
-    "numero": "CTP 147",
-    "nome": "Bendita hora CTP 147",
-    "arquivo": "Bendita hora CTP 147.pdf"
+    "numero": "CTP 105",
+    "nome": "Palavras de Vida CTP 105",
+    "arquivo": "Palavras de Vida CTP 105.pdf"
   },
   {
-    "numero": "CTP 065",
-    "nome": "Glória pra sempre CTP 065",
-    "arquivo": "Glória pra sempre CTP 065.pdf"
+    "numero": "CTP 013",
+    "nome": "Deus dos antigos CTP 013",
+    "arquivo": "Deus dos antigos CTP 013.pdf"
   },
   {
-    "numero": "HC 38",
-    "nome": "Oh! Não consintas tristezas HC 38",
-    "arquivo": "Oh! Não consintas tristezas HC 38.pdf"
+    "numero": "HC 08",
+    "nome": "Fonte Divina da Caridade HC08 SL248",
+    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
   },
   {
-    "numero": "CTP 056",
-    "nome": "Ao Deus de Abraão Louvai CTP 056",
-    "arquivo": "Ao Deus de Abraão Louvai CTP 056.pdf"
-  }  ]
+    "numero": "CTP 232",
+    "nome": "Em tudo as tuas mãos CTP 232",
+    "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
+  },
+  {
+    "numero": "CTP 468",
+    "nome": "Pelas Dores Deste Mundo CTP 468",
+    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
+  } ]
 }
 
 
