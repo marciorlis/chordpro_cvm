@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Seleção de Hinos</title>
 <style>
 body {
@@ -11,88 +11,125 @@ body {
   font-size: 1.3rem;
   line-height: 1.5;
 }
-a {
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-input {
-  font-size: 1.1rem;
-  padding: 0.4rem;
-  margin: 0.2rem 0;
-}
-button {
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-}
-#lista, #selecionados {
-  margin-top: 1rem;
-}
-@media (max-width: 600px) {
-  body {
-    margin: 0.8rem;
-    font-size: 1.15rem;
-  }
-}
+a {font-size:1.1rem;text-decoration:none}
+a:hover{text-decoration:underline}
+input{font-size:1rem;padding:.3rem}
+button{font-size:1rem;margin:.2rem}
+.item{margin:.3rem 0}
+iframe{width:100%;height:90vh;border:none}
 </style>
 </head>
 <body>
-
 <h1>Seleção de Hinos</h1>
-
 <p><b>Semana ISO:</b> <span id="semana"></span></p>
-
-<p>
-<label>Data:</label><br>
-<input type="date" id="data">
-</p>
-
-<p>
-<label>Descrição:</label><br>
-<input type="text" id="descricao" placeholder="Ex.: CVM">
-</p>
-
-<p><b>Nome do arquivo:</b></p>
-<p id="nomeArquivo"></p>
-
+<p>Data:<br><input type="date" id="data"></p>
+<p>Descrição:<br><input id="descricao"></p>
+<p><b>Arquivo:</b> <span id="nome"></span></p>
 <hr>
-
-<p>
 Pesquisar:<br>
-<input type="text" id="busca" placeholder="Digite para pesquisar...">
-</p>
-
-<div id="lista">
-<p><i>Aqui será carregado automaticamente o hinos.json.</i></p>
-</div>
-
+<input id="busca" style="width:100%">
+<div id="resultados"></div>
 <hr>
-
-<h2>Hinos Selecionados</h2>
-
+<h2>Hinos selecionados</h2>
 <ol id="selecionados"></ol>
-
-<button>Gerar JSON</button>
-<button>Copiar JSON</button>
-<button>Limpar seleção</button>
-
+<button onclick="baixar()">Gerar JSON</button>
+<button onclick="navigator.clipboard.writeText(JSON.stringify(gerar(),null,2))">Copiar JSON</button>
+<button onclick="sel=[];renderSel()">Limpar</button>
+<hr>
+<div id="viewer">
+<iframe id="pdfFrame"></iframe>
+</div>
 <script>
-// Próxima etapa:
-// - Carregar hinos.json
-// - Pesquisa dinâmica
-// - Botão +
-// - Ordenação ↑ ↓
-// - Geração do JSON
-// - Download automático
-// Nome:
-// [ANO] [SEMANA_ISO] [DDMMAAAA] [DESCRIÇÃO].json
-//
-// Exemplo:
-// 2026 023 07062026 CVM.json
-</script>
+let catalogo=[], sel=[];
+function proxDomingo(){
+ let d=new Date(); let day=d.getDay();
+ let add=(7-day)%7; if(add==0)add=7;
+ d.setDate(d.getDate()+add); return d;
+}
+function isoWeek(dt){
+ const d=new Date(Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate()));
+ d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
+ const y=new Date(Date.UTC(d.getUTCFullYear(),0,1));
+ return Math.ceil((((d-y)/86400000)+1)/7);
+}
+function fmtData(d){
+ return d.toISOString().slice(0,10);
+}
+function nomeArq(){
+ let d=document.getElementById('data').value;
+ if(!d)return;
+ let dd=d.split('-');
+ let data=dd[2]+dd[1]+dd[0];
+ let ano=dd[0];
+ let sem=String(isoWeek(new Date(d))).padStart(3,'0');
+ let desc=(document.getElementById('descricao').value||'SEM_DESCRICAO').trim().toUpperCase();
+ document.getElementById('semana').innerText=sem;
+ document.getElementById('nome').innerText=ano+" "+sem+" "+data+" "+desc+".json";
+}
+document.getElementById('descricao').oninput=nomeArq;
+document.getElementById('data').onchange=nomeArq;
+let pd=proxDomingo();
+document.getElementById('data').value=fmtData(pd);
+nomeArq();
 
+fetch('hinos.json')
+.then(r=>r.json())
+.then(j=>{catalogo=j;filtra();})
+.catch(e=>{document.getElementById('resultados').innerHTML="<p>Não foi possível carregar hinos.json</p>";});
+
+document.getElementById('busca').oninput=filtra;
+function filtra(){
+ let t=document.getElementById('busca').value.toLowerCase();
+ let out='';
+ catalogo.filter(h=>
+ h.titulo.toLowerCase().includes(t)||
+ h.hinario.toLowerCase().includes(t)||
+ String(h.numero).includes(t))
+ .slice(0,50)
+ .forEach((h,i)=>{
+ out+=`<div class=item>${h.hinario} ${h.numero} - ${h.titulo}
+ <button onclick='abrir(${catalogo.indexOf(h)})'>📄</button>
+ <button onclick='add(${catalogo.indexOf(h)})'>+</button></div>`;
+ });
+ document.getElementById('resultados').innerHTML=out;
+}
+function abrir(i){
+ document.getElementById('pdfFrame').src='pdf/'+encodeURIComponent(catalogo[i].arquivo);
+}
+function add(i){ sel.push(catalogo[i]); renderSel();}
+function up(i){if(i>0){[sel[i-1],sel[i]]=[sel[i],sel[i-1]];renderSel();}}
+function down(i){if(i<sel.length-1){[sel[i+1],sel[i]]=[sel[i],sel[i+1]];renderSel();}}
+function del(i){sel.splice(i,1);renderSel();}
+function renderSel(){
+ let o='';
+ sel.forEach((h,i)=>{
+ o+=`<li>${h.hinario} ${h.numero} - ${h.titulo}
+ <button onclick='up(${i})'>↑</button>
+ <button onclick='down(${i})'>↓</button>
+ <button onclick='del(${i})'>X</button></li>`;
+ });
+ document.getElementById('selecionados').innerHTML=o;
+}
+function gerar(){
+ let d=document.getElementById('data').value;
+ let dd=d.split('-');
+ return {
+  ano:Number(dd[0]),
+  semana:isoWeek(new Date(d)),
+  data:d,
+  descricao:document.getElementById('descricao').value,
+  hinos:sel
+ };
+}
+function baixar(){
+ let obj=gerar();
+ let txt=JSON.stringify(obj,null,2);
+ let blob=new Blob([txt],{type:'application/json'});
+ let a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);
+ a.download=document.getElementById('nome').innerText;
+ a.click();
+}
+</script>
 </body>
 </html>
