@@ -1,0 +1,56 @@
+{
+  "ano": 2026,
+  "semana": 23,
+  "data": "2026-06-07",
+  "descricao": "10domcomum",
+  "hinos": [
+    {
+      "hinario": "CTP",
+      "numero": 56,
+      "titulo": "Ao Deus de Abraão Louvai",
+      "arquivo": "Ao Deus de Abraão Louvai CTP 056.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 65,
+      "titulo": "Glória pra sempre",
+      "arquivo": "Glória pra sempre CTP 065.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 147,
+      "titulo": "Bendita hora",
+      "arquivo": "Bendita hora CTP 147.pdf"
+    },
+    {
+      "hinario": "HC",
+      "numero": 38,
+      "titulo": "Oh! Não consintas tristezas",
+      "arquivo": "Oh! Não consintas tristezas HC 38.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 186,
+      "titulo": "Oh! Que paz Jesus me dá",
+      "arquivo": "Oh! Que paz Jesus me dá CTP 186.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 231,
+      "titulo": "Conta as bênçãos",
+      "arquivo": "Conta as bênçãos CTP 231.pdf"
+    },
+    {
+      "hinario": "AVU",
+      "numero": 9,
+      "titulo": "A Ele a Glória",
+      "arquivo": "A Ele a Glória AVU 09.pdf"
+    },
+    {
+      "hinario": "HC",
+      "numero": 3,
+      "titulo": "Vivi tão Longe do Senhor",
+      "arquivo": "Vivi tão Longe do Senhor HC 03.pdf"
+    }
+  ]
+}
