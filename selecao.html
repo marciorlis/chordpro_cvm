@@ -33,6 +33,7 @@ Pesquisar:<br>
 <h2>Hinos selecionados</h2>
 <ol id="selecionados"></ol>
 <button onclick="baixar()">Gerar JSON</button>
+<button onclick="gerarPreview()">Gerar Página do Domingo</button>
 <button onclick="navigator.clipboard.writeText(JSON.stringify(gerar(),null,2))">Copiar JSON</button>
 <button onclick="sel=[];renderSel()">Limpar</button>
 <hr>
@@ -41,10 +42,15 @@ Pesquisar:<br>
 </div>
 <script>
 let catalogo=[], sel=[];
-function proxDomingo(){
- let d=new Date(); let day=d.getDay();
- let add=(7-day)%7; if(add==0)add=7;
- d.setDate(d.getDate()+add); return d;
+function proxDomingo() {
+    let hoje = new Date();
+    let domingo = new Date(hoje);
+    let dias = 7 - hoje.getDay();
+    if (dias === 7) {
+        dias = 0;
+    }
+    domingo.setDate(hoje.getDate() + dias);
+    return domingo;
 }
 function isoWeek(dt){
  const d=new Date(Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate()));
@@ -129,6 +135,78 @@ function baixar(){
  a.href=URL.createObjectURL(blob);
  a.download=document.getElementById('nome').innerText;
  a.click();
+}
+function gerarPreview() {
+    let rep = gerar();
+    let data = rep.data.split("-");
+    let dataFormatada =
+        data[2] + "/" +
+        data[1] + "/" +
+        data[0];
+    let lista = "";
+    rep.hinos.forEach(function(h, i){
+        lista +=
+        "<div style='margin-bottom:10px'>" +
+        "<a href='#' onclick=\"document.getElementById('pdfFramePreview').src='pdf/" +
+        encodeURIComponent(h.arquivo) +
+        "';return false;\">" +
+        (i+1) + ". " +
+        h.hinario + " " +
+        h.numero + " - " +
+        h.titulo +
+        "</a></div>";
+    });
+    let html =
+    "<!DOCTYPE html>" +
+    "<html lang='pt-BR'>" +
+    "<head>" +
+    "<meta charset='UTF-8'>" +
+    "<title>Hinos do Domingo</title>" +
+    "<style>" +
+    "body{" +
+    "font-family:system-ui;" +
+    "margin:1rem;" +
+    "font-size:1.3rem;" +
+    "line-height:1.5;" +
+    "}" +
+    "a{" +
+    "text-decoration:none;" +
+    "}" +
+    "a:hover{" +
+    "text-decoration:underline;" +
+    "}" +
+    "iframe{" +
+    "width:100%;" +
+    "height:90vh;" +
+    "border:none;" +
+    "}" +
+    "</style>" +
+    "</head>" +
+    "<body>" +
+    "<h1>Hinos do Domingo – " +
+    dataFormatada +
+    "</h1>" +
+    "<h2>" +
+    rep.descricao +
+    "</h2>" +
+    "<p>Clique em um hino para abrir a partitura.</p>" +
+    lista +
+    "<hr>" +
+    "<iframe id='pdfFramePreview'></iframe>" +
+    "</body>" +
+    "</html>";
+    let blob =
+        new Blob(
+            [html],
+            {type:"text/html"}
+        );
+    let a =
+        document.createElement("a");
+    a.href =
+        URL.createObjectURL(blob);
+    a.download =
+        "hinos-do-domingo.html";
+    a.click();
 }
 </script>
 </body>
