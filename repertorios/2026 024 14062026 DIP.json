@@ -1,0 +1,50 @@
+{
+  "ano": 2026,
+  "semana": 24,
+  "data": "2026-06-14",
+  "descricao": "DIP",
+  "hinos": [
+    {
+      "hinario": "CTP",
+      "numero": 13,
+      "titulo": "Deus dos antigos",
+      "arquivo": "Deus dos antigos CTP 013.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 468,
+      "titulo": "Pelas Dores Deste Mundo",
+      "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
+    },
+    {
+      "hinario": "HC",
+      "numero": 8,
+      "titulo": "Fonte Divina da Caridade",
+      "arquivo": "Fonte Divina da Caridade HC 08.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 300,
+      "titulo": "O Espírito do Senhor",
+      "arquivo": "O Espírito do Senhor CTP 300.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 232,
+      "titulo": "Em tudo as tuas mãos",
+      "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
+    },
+    {
+      "hinario": "CTP",
+      "numero": 105,
+      "titulo": "Palavras de Vida",
+      "arquivo": "Palavras de Vida CTP 105.pdf"
+    },
+    {
+      "hinario": "AVU",
+      "numero": 10,
+      "titulo": "Hino pela Igreja Perseguida",
+      "arquivo": "Hino pela Igreja Perseguida AVU 10.pdf"
+    }
+  ]
+}
