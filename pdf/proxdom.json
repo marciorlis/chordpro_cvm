@@ -1,47 +1,18 @@
-
-  {
-  "data": "2026-06-14",
+{
   "titulo": "",
+  "data": "2026-06-21",
   "hinos": [
-  {
-    "numero": "AVU 10",
-    "nome": "Hino pela Igreja Perseguida AVU 10",
-    "arquivo": "Hino pela Igreja Perseguida AVU 10.pdf"
-  },
-  {
-    "numero": "CTP 300",
-    "nome": "O Espírito do Senhor CTP 300",
-    "arquivo": "O Espírito do Senhor CTP 300.pdf"
-  },
-  {
-    "numero": "CTP 105",
-    "nome": "Palavras de Vida CTP 105",
-    "arquivo": "Palavras de Vida CTP 105.pdf"
-  },
-  {
-    "numero": "CTP 013",
-    "nome": "Deus dos antigos CTP 013",
-    "arquivo": "Deus dos antigos CTP 013.pdf"
-  },
-  {
-    "numero": "HC 08",
-    "nome": "Fonte Divina da Caridade HC08 SL248",
-    "arquivo": "Fonte Divina da Caridade HC08 SL248.pdf"
-  },
-  {
-    "numero": "CTP 232",
-    "nome": "Em tudo as tuas mãos CTP 232",
-    "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
-  },
-  {
-    "numero": "CTP 468",
-    "nome": "Pelas Dores Deste Mundo CTP 468",
-    "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
-  } ]
+    {
+      "numero": "AVU 9",
+      "titulo": "A Ele a Glória",
+      "arquivo": "A Ele a Glória AVU 09.pdf"
+    },
+    {
+      "numero": "HC 33",
+      "titulo": "Este Amor Que Nos Inunda",
+      "arquivo": "Este Amor Que Nos Inunda HC 33.pdf"
+    }
+  ]
 }
-
-
-
-
 
 
