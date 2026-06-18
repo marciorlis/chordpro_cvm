@@ -4,12 +4,12 @@
   "hinos": [
     {
       "numero": "AVU 9",
-      "titulo": "A Ele a Glória",
+      "nome": "A Ele a Glória",
       "arquivo": "A Ele a Glória AVU 09.pdf"
     },
     {
       "numero": "HC 33",
-      "titulo": "Este Amor Que Nos Inunda",
+      "nome": "Este Amor Que Nos Inunda",
       "arquivo": "Este Amor Que Nos Inunda HC 33.pdf"
     }
   ]
