@@ -3,14 +3,19 @@
   "data": "2026-07-05",
   "hinos": [
     {
-      "numero": "CTP 56",
-      "nome": "Ao Deus de Abraão Louvai",
-      "arquivo": "Ao Deus de Abraão Louvai CTP 056.pdf"
+      "numero": "CTP 85",
+      "nome": "Não a Nós, Senhor",
+      "arquivo": "Não a Nós, Senhor CTP 85.pdf"
+    },
+    {
+      "numero": "AVU 11",
+      "nome": "Perdoa-me, Senhor (APENAS PARA ENSAIO)",
+      "arquivo": "Perdoa-me, Senhor AVU 11.pdf"
     },
   {
-    "numero": "CTP 273",
-    "nome": "Um pouco além do presente",
-    "arquivo": "Um pouco além do presente CTP 273.pdf"
+    "numero": "CTP 4",
+    "nome": "Altamente os Céus Proclamam",
+    "arquivo": "Altamente os Céus Proclamam CTP 4.pdf"
   }
   ]
 }
