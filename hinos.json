@@ -37,6 +37,12 @@
   },
   {
     "hinario": "CTP",
+    "numero": 4,
+    "titulo": "Altamente os Céus Proclamam",
+    "arquivo": "Altamente os Céus Proclamam CTP 4.pdf"
+  },
+  {
+    "hinario": "CTP",
     "numero": 438,
     "titulo": "Amém Afro-americano",
     "arquivo": "Amém Afro-americano CTP 438.pdf"
@@ -252,6 +258,12 @@
     "arquivo": "Maravilhosas graça CTP 133.pdf"
   },
   {
+    "hinario": "CTP",
+    "numero": 85,
+    "titulo": "Não a Nós, Senhor",
+    "arquivo": "Não a Nós, Senhor CTP 85.pdf"
+  },
+  {
     "hinario": "AVU",
     "numero": 3,
     "titulo": "Não Há Deus Maior",
@@ -322,6 +334,12 @@
     "numero": 468,
     "titulo": "Pelas Dores Deste Mundo",
     "arquivo": "Pelas Dores Deste Mundo CTP 468.pdf"
+  },
+  {
+    "hinario": "AVU",
+    "numero": 11,
+    "titulo": "Perdoa-me, Senhor",
+    "arquivo": "Perdoa-me, Senhor AVU 11.pdf"
   },
   {
     "hinario": "CTP",
