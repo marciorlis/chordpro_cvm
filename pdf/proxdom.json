@@ -1,31 +1,16 @@
 {
   "titulo": "",
-  "data": "2026-07-19",
+  "data": "2026-07-26",
   "hinos": [
     {
-      "numero": "CTP 145 1a",
-      "nome": "As Tuas Mãos Dirigem Meu Destino CTP 145 1a",
-      "arquivo": "As Tuas Mãos Dirigem Meu Destino CTP 145 1a.pdf"
-    },
-    {
-      "numero": "CTP 15",
-      "nome": "Como Água Cristalina CTP 15",
-      "arquivo": "Como Água Cristalina CTP 15.pdf"
-    },
-    {
-      "numero": "CTP 182",
-      "nome": "Sossegai CTP 182",
-      "arquivo": "Sossegai CTP 182.pdf"
+      "numero": "HC 02",
+      "nome": "Porque ele vive HC 02",
+      "arquivo": "Porque ele vive HC 02.pdf"
     },
     {
       "numero": "AVU 11",
       "nome": "Perdoa-me, Senhor (APENAS PARA ENSAIO)",
       "arquivo": "Perdoa-me, Senhor AVU 11.pdf"
-    },
-  {
-    "numero": "CTP 433",
-    "nome": "Ale, Ale, Aleluia",
-    "arquivo": "Ale, Ale, Aleluia CTP 433.pdf"
   }
   ]
 }
