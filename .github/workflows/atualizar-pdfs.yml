@@ -24,10 +24,30 @@ jobs:
         run: |
           node -e "
           const fs = require('fs');
-          const path = require('path');
           const pdfDir = './pdf';
           const files = fs.readdirSync(pdfDir).filter(f => f.endsWith('.pdf'));
-          fs.writeFileSync('./pdf/pdfs.json', JSON.stringify(files, null, 2));
+
+          const jsonContent = files.map(filename => {
+            const nameWithoutExt = filename.replace(/\.pdf$/i, '').trim();
+            // Procura por padrões como 'CTP 85', 'AVU 11', 'HC 03', 'HC04', 'SL248' no final ou meio
+            const match = nameWithoutExt.match(/(.*?)\s*([A-Z]{2,3}\s*\d+|\b\d+\b)$/i);
+
+            let nome = nameWithoutExt;
+            let numero = '';
+
+            if (match) {
+              nome = match[1].trim();
+              numero = match[2].trim();
+            }
+
+            return {
+              numero: numero,
+              nome: nome,
+              arquivo: filename
+            };
+          });
+
+          fs.writeFileSync('./pdf/pdfs.json', JSON.stringify(jsonContent, null, 2));
           "
 
       - name: Commit e Push das alterações
