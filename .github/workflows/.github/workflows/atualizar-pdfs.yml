@@ -1,0 +1,38 @@
+name: Atualizar pdfs.json
+
+on:
+  push:
+    paths:
+      - 'pdf/*.pdf'
+
+jobs:
+  generate-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerar pdfs.json
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          const pdfDir = './pdf';
+          const files = fs.readdirSync(pdfDir).filter(f => f.endsWith('.pdf'));
+          fs.writeFileSync('./pdf/pdfs.json', JSON.stringify(files, null, 2));
+          "
+
+      - name: Commit e Push das alterações
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add pdf/pdfs.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: atualizar pdfs.json automaticamente" && git push)
