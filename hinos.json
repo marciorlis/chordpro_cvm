@@ -151,6 +151,12 @@
   },
   {
     "hinario": "CTP",
+    "numero": 409,
+    "titulo": "Castelo Forte",
+    "arquivo": "Castelo Forte CTP 409.pdf"
+  },
+  {
+    "hinario": "CTP",
     "numero": 184,
     "titulo": "Comigo Estar!",
     "arquivo": "Comigo Estar! CTP 184.pdf"
@@ -274,6 +280,12 @@
     "numero": 10,
     "titulo": "Hino pela Igreja Perseguida",
     "arquivo": "Hino pela Igreja Perseguida AVU 10.pdf"
+  },
+  {
+    "hinario": "CTP",
+    "numero": 278,
+    "titulo": "Igreja Alerta",
+    "arquivo": "Igreja Alerta CTP 278.pdf"
   },
   {
     "hinario": "CTP",
