@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Seleção de Hinos</title>
+<title>• Seleção de Hinos •</title>
 <style>
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -36,6 +36,7 @@ Pesquisar:<br>
 <button onclick="gerarPreview()">Gerar Página do Domingo</button>
 <button onclick="navigator.clipboard.writeText(JSON.stringify(gerar(),null,2))">Copiar JSON</button>
 <button onclick="sel=[];renderSel()">Limpar</button>
+<button onclick="salvarNoGithub()">Salvar no GitHub</button> <!-- eu adicionei -->
 <hr>
 <div id="viewer">
 <iframe id="pdfFrame"></iframe>
@@ -208,6 +209,64 @@ function gerarPreview() {
         "hinos-do-domingo.html";
     a.click();
 }
+
+//start adicionei
+async function salvarNoGithub() {
+  const GITHUB_TOKEN = "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"; // Cole seu token ghp_... aqui
+  const REPO_OWNER = "marciorlis";       // Seu usuário no GitHub
+  const REPO_NAME = "chordpro_cvm";       // Nome do repositório
+  
+  let obj = gerar();
+  let nomeArquivo = document.getElementById('nome').innerText;
+  
+  // Caminho onde o arquivo será salvo dentro do repositório
+  // mudei de `selecoes/ para `pdf/
+  let path = `pdf/${nomeArquivo}`; 
+
+  // A API do GitHub exige que o conteúdo seja enviado em Base64
+  let conteudoJson = JSON.stringify(obj, null, 2);
+  let conteudoBase64 = btoa(unescape(encodeURIComponent(conteudoJson)));
+
+  let url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
+
+  try {
+    // 1. Verifica se o arquivo já existe para obter o 'sha' (necessário em atualizações)
+    let sha = null;
+    let checarArquivo = await fetch(url, {
+      headers: { "Authorization": `token ${GITHUB_TOKEN}` }
+    });
+    
+    if (checarArquivo.ok) {
+      let dadosExistentes = await checarArquivo.json();
+      sha = dadosExistentes.sha;
+    }
+
+    // 2. Envia o arquivo para o repositório (Criar ou Atualizar)
+    let resposta = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Authorization": `token ${GITHUB_TOKEN}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: `Adiciona seleção: ${nomeArquivo}`, // Mensagem do commit
+        content: conteudoBase64,
+        sha: sha // Envia o sha se o arquivo já existir, senão vai nulo
+      })
+    });
+
+    if (resposta.ok) {
+      alert("Arquivo salvo com sucesso no GitHub!");
+    } else {
+      let erro = await resposta.json();
+      alert(`Erro ao salvar no GitHub: ${erro.message}`);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Falha de conexão com a API do GitHub.");
+  }
+}
+//end adicionei
 </script>
 </body>
 </html>
