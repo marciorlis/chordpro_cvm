@@ -3,29 +3,15 @@
   "data": "2026-08-16",
   "hinos": [
     {
-      "numero": "AVU 11",
-      "nome": "Perdoa-me, Senhor AVU 11",
-      "arquivo": "Perdoa-me, Senhor AVU 11.pdf"
+      "numero": "CTP 409",
+      "nome": "Castelo Forte CTP 409",
+      "arquivo": "Castelo Forte CTP 409.pdf"
     },
+
     {
-      "numero": "CTP 133",
-      "nome": "Maravilhosas graça CTP 133",
-      "arquivo": "Maravilhosas graça CTP 133.pdf"
-    },
-    {
-      "numero": "CTP 297",
-      "nome": "Que estou fazendo CTP 297",
-      "arquivo": "Que estou fazendo CTP 297.pdf"
-    },
-    {
-      "numero": "CTP 002",
-      "nome": "Deus está no templo CTP 002",
-      "arquivo": "Deus Está no Templo CTP 002.pdf"
-    },
-    {
-      "numero": "CTP 216",
-      "nome": "Renova-me CTP 216 - CONFRATERNIZAÇÃO",
-      "arquivo": "Renova-me CTP 216.pdf"
+      "numero": "278",
+      "nome": "Igreja Alerta CTP 278",
+      "arquivo": "Igreja Alerta CTP 278.pdf"
   }
   ]
 }
