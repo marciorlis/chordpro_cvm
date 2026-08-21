@@ -1,0 +1,26 @@
+{
+  "ano": 2026,
+  "semana": 34,
+  "data": "2026-08-23",
+  "descricao": "00",
+  "hinos": [
+    {
+      "hinario": "CTP",
+      "numero": 118,
+      "titulo": "Amor perene",
+      "arquivo": "Amor perene CTP 118.pdf"
+    },
+    {
+      "hinario": "AVU",
+      "numero": 1,
+      "titulo": "Ao Meu Redor",
+      "arquivo": "Ao Meu Redor AVU 01.pdf"
+    },
+    {
+      "hinario": "AVU",
+      "numero": 2,
+      "titulo": "Ele É Exaltado",
+      "arquivo": "Ele É Exaltado AVU 02.pdf"
+    }
+  ]
+}
