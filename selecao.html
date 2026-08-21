@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seleção de Hinos</title>
+<style>
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+a {font-size:1.1rem;text-decoration:none}
+a:hover{text-decoration:underline}
+input{font-size:1rem;padding:.3rem}
+button{font-size:1rem;margin:.2rem}
+.item{margin:.3rem 0}
+iframe{width:100%;height:90vh;border:none}
+</style>
+</head>
+<body>
+<h1>Seleção de Hinos</h1>
+<p><b>Semana ISO:</b> <span id="semana"></span></p>
+<p>Data:<br><input type="date" id="data"></p>
+<p>Descrição:<br><input id="descricao"></p>
+<p><b>Arquivo:</b> <span id="nome"></span></p>
+<hr>
+Pesquisar:<br>
+<input id="busca" style="width:100%">
+<div id="resultados"></div>
+<hr>
+<h2>Hinos selecionados</h2>
+<ol id="selecionados"></ol>
+<button onclick="baixar()">Gerar JSON</button>
+<button onclick="gerarPreview()">Gerar Página do Domingo</button>
+<button onclick="navigator.clipboard.writeText(JSON.stringify(gerar(),null,2))">Copiar JSON</button>
+<button onclick="sel=[];renderSel()">Limpar</button>
+<button onclick="salvarNoGithub()">Salvar no GitHub</button> <!-- eu adicionei -->
+<hr>
+<div id="viewer">
+<iframe id="pdfFrame"></iframe>
+</div>
+<script>
+let catalogo=[], sel=[];
+function proxDomingo() {
+    let hoje = new Date();
+    let domingo = new Date(hoje);
+    let dias = 7 - hoje.getDay();
+    if (dias === 7) {
+        dias = 0;
+    }
+    domingo.setDate(hoje.getDate() + dias);
+    return domingo;
+}
+function isoWeek(dt){
+ const d=new Date(Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate()));
+ d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
+ const y=new Date(Date.UTC(d.getUTCFullYear(),0,1));
+ return Math.ceil((((d-y)/86400000)+1)/7);
+}
+function fmtData(d){
+ return d.toISOString().slice(0,10);
+}
+function nomeArq(){
+ let d=document.getElementById('data').value;
+ if(!d)return;
+ let dd=d.split('-');
+ let data=dd[2]+dd[1]+dd[0];
+ let ano=dd[0];
+ let sem=String(isoWeek(new Date(d))).padStart(3,'0');
+ let desc=(document.getElementById('descricao').value||'SEM_DESCRICAO').trim().toUpperCase();
+ document.getElementById('semana').innerText=sem;
+ document.getElementById('nome').innerText=ano+" "+sem+" "+data+" "+desc+".json";
+}
+document.getElementById('descricao').oninput=nomeArq;
+document.getElementById('data').onchange=nomeArq;
+let pd=proxDomingo();
+document.getElementById('data').value=fmtData(pd);
+nomeArq();
+
+fetch('hinos.json')
+.then(r=>r.json())
+.then(j=>{catalogo=j;filtra();})
+.catch(e=>{document.getElementById('resultados').innerHTML="<p>Não foi possível carregar hinos.json</p>";});
+
+document.getElementById('busca').oninput=filtra;
+function filtra(){
+ let t=document.getElementById('busca').value.toLowerCase();
+ let out='';
+ catalogo.filter(h=>
+ h.titulo.toLowerCase().includes(t)||
+ h.hinario.toLowerCase().includes(t)||
+ String(h.numero).includes(t))
+ .slice(0,50)
+ .forEach((h,i)=>{
+ out+=`<div class=item>${h.hinario} ${h.numero} - ${h.titulo}
+ <button onclick='abrir(${catalogo.indexOf(h)})'>📄</button>
+ <button onclick='add(${catalogo.indexOf(h)})'>+</button></div>`;
+ });
+ document.getElementById('resultados').innerHTML=out;
+}
+function abrir(i){
+ document.getElementById('pdfFrame').src='pdf/'+encodeURIComponent(catalogo[i].arquivo);
+}
+function add(i){ sel.push(catalogo[i]); renderSel();}
+function up(i){if(i>0){[sel[i-1],sel[i]]=[sel[i],sel[i-1]];renderSel();}}
+function down(i){if(i<sel.length-1){[sel[i+1],sel[i]]=[sel[i],sel[i+1]];renderSel();}}
+function del(i){sel.splice(i,1);renderSel();}
+function renderSel(){
+ let o='';
+ sel.forEach((h,i)=>{
+ o+=`<li>${h.hinario} ${h.numero} - ${h.titulo}
+ <button onclick='up(${i})'>↑</button>
+ <button onclick='down(${i})'>↓</button>
+ <button onclick='del(${i})'>X</button></li>`;
+ });
+ document.getElementById('selecionados').innerHTML=o;
+}
+function gerar(){
+ let d=document.getElementById('data').value;
+ let dd=d.split('-');
+ return {
+  ano:Number(dd[0]),
+  semana:isoWeek(new Date(d)),
+  data:d,
+  descricao:document.getElementById('descricao').value,
+  hinos:sel
+ };
+}
+function baixar(){
+ let obj=gerar();
+ let txt=JSON.stringify(obj,null,2);
+ let blob=new Blob([txt],{type:'application/json'});
+ let a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);
+ a.download=document.getElementById('nome').innerText;
+ a.click();
+}
+function gerarPreview() {
+    let rep = gerar();
+    let data = rep.data.split("-");
+    let dataFormatada =
+        data[2] + "/" +
+        data[1] + "/" +
+        data[0];
+    let lista = "";
+    rep.hinos.forEach(function(h, i){
+        lista +=
+        "<div style='margin-bottom:10px'>" +
+        "<a href='#' onclick=\"document.getElementById('pdfFramePreview').src='pdf/" +
+        encodeURIComponent(h.arquivo) +
+        "';return false;\">" +
+        (i+1) + ". " +
+        h.hinario + " " +
+        h.numero + " - " +
+        h.titulo +
+        "</a></div>";
+    });
+    let html =
+    "<!DOCTYPE html>" +
+    "<html lang='pt-BR'>" +
+    "<head>" +
+    "<meta charset='UTF-8'>" +
+    "<title>Hinos do Domingo</title>" +
+    "<style>" +
+    "body{" +
+    "font-family:system-ui;" +
+    "margin:1rem;" +
+    "font-size:1.3rem;" +
+    "line-height:1.5;" +
+    "}" +
+    "a{" +
+    "text-decoration:none;" +
+    "}" +
+    "a:hover{" +
+    "text-decoration:underline;" +
+    "}" +
+    "iframe{" +
+    "width:100%;" +
+    "height:90vh;" +
+    "border:none;" +
+    "}" +
+    "</style>" +
+    "</head>" +
+    "<body>" +
+    "<h1>Hinos do Domingo – " +
+    dataFormatada +
+    "</h1>" +
+    "<h2>" +
+    rep.descricao +
+    "</h2>" +
+    "<p>Clique em um hino para abrir a partitura.</p>" +
+    lista +
+    "<hr>" +
+    "<iframe id='pdfFramePreview'></iframe>" +
+    "</body>" +
+    "</html>";
+    let blob =
+        new Blob(
+            [html],
+            {type:"text/html"}
+        );
+    let a =
+        document.createElement("a");
+    a.href =
+        URL.createObjectURL(blob);
+    a.download =
+        "hinos-do-domingo.html";
+    a.click();
+}
+
+//start adicionei
+async function salvarNoGithub() {
+  // Pega o token salvo no navegador ou pede ao usuário se não existir
+  let token = localStorage.getItem("github_token");
+  if (!token) {
+    token = prompt("Informe seu Personal Access Token do GitHub (ghp_...):");
+    if (!token) return alert("Token é obrigatório para salvar.");
+    localStorage.setItem("github_token", token.trim());
+  }
+
+  const REPO_OWNER = "marciorlis";
+  const REPO_NAME = "chordpro_cvm";
+  
+  let obj = gerar();
+  let nomeArquivo = document.getElementById('nome').innerText;
+  let path = `pdf/${nomeArquivo}`; 
+
+  let conteudoJson = JSON.stringify(obj, null, 2);
+  let conteudoBase64 = btoa(unescape(encodeURIComponent(conteudoJson)));
+
+  let url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`;
+
+  try {
+    let sha = null;
+    let checarArquivo = await fetch(url, {
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+    
+    if (checarArquivo.status === 401) {
+      localStorage.removeItem("github_token");
+      return alert("Token inválido ou expirado! Tente clicar no botão novamente para informar um novo token.");
+    }
+
+    if (checarArquivo.ok) {
+      let dadosExistentes = await checarArquivo.json();
+      sha = dadosExistentes.sha;
+    }
+
+    let resposta = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: `Adiciona seleção: ${nomeArquivo}`,
+        content: conteudoBase64,
+        sha: sha
+      })
+    });
+
+    if (resposta.ok) {
+      alert("Arquivo salvo com sucesso no GitHub!");
+    } else {
+      let erro = await resposta.json();
+      alert(`Erro ao salvar no GitHub: ${erro.message}`);
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Falha de conexão com a API do GitHub.");
+  }
+}
+//end adicionei
+</script>
+</body>
+</html>
