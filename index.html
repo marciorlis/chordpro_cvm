@@ -68,11 +68,11 @@ fetch('pdf/proxdomx.json')
 });
 </script>
 
-<!-- LISTA PROXDOM -->
+<!-- LISTA PROXDOMY -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-fetch('pdf/proxdom.json')
+fetch('pdf/proxdomy.json')
 .then(res => res.json())
 .then(dados => {
 
@@ -130,6 +130,58 @@ fetch('pdf/proxdom.json')
 });
 </script>
 
+<!-- inicio  -->
+<!-- LISTA PROXDOM -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+fetch('pdf/proxdom.json')
+.then(res => res.json())
+.then(dados => {
+
+  const container = document.getElementById('lista-proxdom');
+
+  // 1. Cria o título com o nome da seleção e a data formatada
+  const titulo = document.createElement('h3');
+
+  let dataFormatada = "";
+  if (dados.data) {
+    const [ano, mes, dia] = dados.data.split('-');
+    const dataLocal = new Date(ano, mes - 1, dia);
+    dataFormatada = dataLocal.toLocaleDateString('pt-BR');
+  }
+
+  // Exibe o título (se houver) e a data
+  const textoTitulo = dados.titulo ? `${dados.titulo} — ${dataFormatada}` : `Hinos do Domingo — ${dataFormatada}`;
+  titulo.textContent = textoTitulo;
+  container.appendChild(titulo);
+
+  // 2. Renderiza a lista de hinos na ordem em que foram gravados no JSON
+  const lista = dados.hinos || [];
+
+  lista.forEach(item => {
+    const p = document.createElement('p');
+
+    const a = document.createElement('a');
+    a.href = 'pdf/' + item.arquivo;
+    
+    // Exibe o nome formatado e o número do hino
+    a.textContent = `${item.nome}`;
+
+    a.onclick = function(e) {
+      e.preventDefault();
+      abrirPDF(this.getAttribute('href'));
+    };
+
+    p.appendChild(a);
+    container.appendChild(p);
+  });
+
+})
+.catch(erro => console.error('Erro ao carregar o JSON do domingo:', erro));
+});
+</script>
+<!-- termino  -->  
 <style>
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
