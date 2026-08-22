@@ -79,10 +79,10 @@ let pd=proxDomingo();
 document.getElementById('data').value=fmtData(pd);
 nomeArq();
 
-fetch('hinos.json')
+fetch('pdfs.json')
 .then(r=>r.json())
 .then(j=>{catalogo=j;filtra();})
-.catch(e=>{document.getElementById('resultados').innerHTML="<p>Não foi possível carregar hinos.json</p>";});
+.catch(e=>{document.getElementById('resultados').innerHTML="<p>Não foi possível carregar pdfs.json</p>";});
 
 document.getElementById('busca').oninput=filtra;
 function filtra(){
