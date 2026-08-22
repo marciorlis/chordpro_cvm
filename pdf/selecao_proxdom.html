@@ -22,10 +22,9 @@ iframe{width:100%;height:90vh;border:none}
 <body>
 <h1>Seleção de Hinos</h1>
 <p><b>Semana ISO:</b> <span id="semana"></span></p>
-<p><b>Nome do Arquivo:</b> <span id="nome"></span></p> <!-- ADICIONE ESTA LINHA -->
-<p>Título:<br><input id="titulo"></p>
 <p>Data:<br><input type="date" id="data"></p>
 <p>Descrição:<br><input id="descricao"></p>
+<p><b>Arquivo:</b> <span id="nome"></span></p>
 <hr>
 Pesquisar:<br>
 <input id="busca" style="width:100%">
@@ -118,16 +117,16 @@ function renderSel(){
  });
  document.getElementById('selecionados').innerHTML=o;
 }
-function gerar() {
-  return {
-    titulo: document.getElementById('titulo').value || "",
-    data: document.getElementById('data').value,
-    hinos: sel.map(h => ({
-      numero: String(h.numero),
-      nome: `${h.titulo} ${h.hinario} ${h.numero}`.trim(),
-      arquivo: h.arquivo
-    }))
-  };
+function gerar(){
+ let d=document.getElementById('data').value;
+ let dd=d.split('-');
+ return {
+  ano:Number(dd[0]),
+  semana:isoWeek(new Date(d)),
+  data:d,
+  descricao:document.getElementById('descricao').value,
+  hinos:sel
+ };
 }
 function baixar(){
  let obj=gerar();
@@ -189,7 +188,7 @@ function gerarPreview() {
     dataFormatada +
     "</h1>" +
     "<h2>" +
-    rep.titulo +
+    rep.descricao +
     "</h2>" +
     "<p>Clique em um hino para abrir a partitura.</p>" +
     lista +
