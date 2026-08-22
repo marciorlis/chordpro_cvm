@@ -22,6 +22,7 @@ iframe{width:100%;height:90vh;border:none}
 <body>
 <h1>Seleção de Hinos</h1>
 <p><b>Semana ISO:</b> <span id="semana"></span></p>
+<p><b>Nome do Arquivo:</b> <span id="nome"></span></p> <!-- ADICIONE ESTA LINHA -->
 <p>Título:<br><input id="titulo"></p>
 <p>Data:<br><input type="date" id="data"></p>
 <p>Descrição:<br><input id="descricao"></p>
@@ -188,7 +189,7 @@ function gerarPreview() {
     dataFormatada +
     "</h1>" +
     "<h2>" +
-    rep.descricao +
+    rep.titulo +
     "</h2>" +
     "<p>Clique em um hino para abrir a partitura.</p>" +
     lista +
