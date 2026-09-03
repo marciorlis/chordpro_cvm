@@ -3,19 +3,24 @@
   "data": "2026-08-30",
   "hinos": [
     {
-      "numero": "CTP 013",
-      "nome": "Deus dos antigos CTP 013",
-      "arquivo": "Deus dos antigos CTP 013.pdf"
+      "numero": "CTP 065",
+      "nome": "Glória pra sempre CTP 065",
+      "arquivo": "Glória pra sempre CTP 065.pdf"
     },
     {
-      "numero": "HC 01",
-      "nome": "Deixa o Salvador te ajudar HC 01",
-      "arquivo": "Deixa o Salvador te ajudar HC 01.pdf"
+      "numero": "AVU 13",
+      "nome": "Te louvarei (Perto quero estar) AVU 13",
+      "arquivo": "Te louvarei (Perto quero estar) AVU 13.pdf"
     },
     {
-      "numero": "CTP 124",
-      "nome": "Meu Bom Pastor CTP 124 [confraternização]",
-      "arquivo": "Meu Bom Pastor CTP 124.pdf"
+      "numero": "HC 28",
+      "nome": "Eu Sou o Pão da Vida HC 28",
+      "arquivo": "Eu Sou o Pão da Vida HC 28.pdf"
+    }.
+    {
+      "numero": "AVU 12",
+      "nome": "Faz Chover (Assim como a corça) AVU 12",
+      "arquivo": "Faz Chover (Assim como a corça) AVU 12.pdf"
     }
   ]
 }
