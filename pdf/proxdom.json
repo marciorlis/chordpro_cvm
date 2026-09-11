@@ -1,26 +1,26 @@
 {
   "titulo": "",
-  "data": "2026-08-30",
+  "data": "2026-09-13",
   "hinos": [
     {
-      "numero": "CTP 065",
-      "nome": "Glória pra sempre CTP 065",
-      "arquivo": "Glória pra sempre CTP 065.pdf"
+      "numero": "CTP 020",
+      "nome": "Brilha Jesus CTP 020",
+      "arquivo": "Brilha Jesus CTP 020.pdf"
     },
     {
-      "numero": "AVU 13",
-      "nome": "Te louvarei (Perto quero estar) AVU 13",
-      "arquivo": "Te louvarei (Perto quero estar) AVU 13.pdf"
+      "numero": "AVU 14",
+      "nome": "Meu Jesus Salvador (Aclame ao Senhor) AVU 14",
+      "arquivo": "Meu Jesus Salvador (Aclame ao Senhor) AVU 14.pdf"
     },
     {
-      "numero": "HC 28",
-      "nome": "Eu Sou o Pão da Vida HC 28",
-      "arquivo": "Eu Sou o Pão da Vida HC 28.pdf"
+      "numero": "CTP 114",
+      "nome": "A Paz do Céu CTP 114",
+      "arquivo": "A Paz do Céu CTP 114.pdf"
     },
     {
-      "numero": "AVU 12",
-      "nome": "Faz Chover (Assim como a corça) AVU 12",
-      "arquivo": "Faz Chover (Assim como a corça) AVU 12.pdf"
+      "numero": "AVU 15",
+      "nome": "Alma Cansada AVU 15",
+      "arquivo": "Alma Cansada AVU 15.pdf"
     }
   ]
 }
