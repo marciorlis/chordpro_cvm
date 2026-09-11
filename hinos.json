@@ -25,6 +25,12 @@
   },
   {
     "hinario": "CTP",
+    "numero": 114,
+    "titulo": "A Paz do Céu",
+    "arquivo": "A Paz do Céu CTP 114.pdf"
+  },
+  {
+    "hinario": "CTP",
     "numero": 1,
     "titulo": "Adorai em majestade",
     "arquivo": "Adorai em majestade CTP 001.pdf"
@@ -40,6 +46,12 @@
     "numero": 433,
     "titulo": "Ale, Ale, Aleluia",
     "arquivo": "Ale, Ale, Aleluia CTP 433.pdf"
+  },
+  {
+    "hinario": "AVU",
+    "numero": 15,
+    "titulo": "Alma Cansada",
+    "arquivo": "Alma Cansada AVU 15.pdf"
   },
   {
     "hinario": "CTP",
@@ -322,6 +334,12 @@
     "numero": 124,
     "titulo": "Meu Bom Pastor",
     "arquivo": "Meu Bom Pastor CTP 124.pdf"
+  },
+  {
+    "hinario": "AVU",
+    "numero": 14,
+    "titulo": "Meu Jesus Salvador (Aclame ao Senhor)",
+    "arquivo": "Meu Jesus Salvador (Aclame ao Senhor) AVU 14.pdf"
   },
   {
     "hinario": "CTP",
