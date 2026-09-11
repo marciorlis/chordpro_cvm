@@ -121,13 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 1rem;
       font-size: 1.1rem;
-      line-height: 1.5;
+      line-height: 1.5;/* Deixa a altura da linha do link mais justa ERA 1.5 */
     }
 
     h1, h2 {
       line-height: 1.3;
     }
-
+  p {
+    margin: 0.2rem 0; /* Diminui a distância entre os parágrafos */
+  }
     a {
       font-size: 1.1rem;
       text-decoration: none;
@@ -135,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     a:hover {
       text-decoration: underline;
+      line-height: 1.2; /* Deixa a altura da linha do link mais justa ERA 1.5 */
     }
 
     /* Área onde a música renderizada aparece */
