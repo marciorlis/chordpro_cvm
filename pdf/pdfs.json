@@ -200,9 +200,19 @@
     "arquivo": "Ele É Exaltado AVU 02.pdf"
   },
   {
+    "numero": "CTP 218",
+    "nome": "Em Fervente Oração",
+    "arquivo": "Em Fervente Oração CTP 218.pdf"
+  },
+  {
     "numero": "CTP 232",
     "nome": "Em tudo as tuas mãos",
     "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
+  },
+  {
+    "numero": "CTP 22",
+    "nome": "Estamos Juntos, Prontos Para Adoração",
+    "arquivo": "Estamos Juntos, Prontos Para Adoração CTP 22.pdf"
   },
   {
     "numero": "HC 33",
@@ -408,6 +418,11 @@
     "numero": "CTP368",
     "nome": "Rude Cruz",
     "arquivo": "Rude Cruz CTP368.pdf"
+  },
+  {
+    "numero": "AVU 16",
+    "nome": "Salmo 19",
+    "arquivo": "Salmo 19 AVU 16.pdf"
   },
   {
     "numero": "CTP 379",
