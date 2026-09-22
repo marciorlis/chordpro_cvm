@@ -1,31 +1,31 @@
 {
   "titulo": "",
-  "data": "2026-09-20",
+  "data": "2026-09-27",
   "hinos": [
      {
-      "numero": "HC 10",
-      "nome": "Nada é Impossível HC 10",
-      "arquivo": "Nada é Impossível HC 10.pdf"
+      "numero": "AVU 17",
+      "nome": "Louvor ao Rei (A Honra) AVU 17",
+      "arquivo": "Louvor ao Rei (A Honra) AVU 17.pdf"
     },
     {
-      "numero": "AVU 16",
-      "nome": "Salmo 19 AVU 16",
-      "arquivo": "Salmo 19 AVU 16.pdf"
+      "numero": "CTP 89",
+      "nome": "Brilho Celeste! arr. (Peregrinando) CTP 89",
+      "arquivo": "Brilho Celeste! arr. (Peregrinando) CTP 89.pdf"
     },
     {
-      "numero": "CTP 218",
-      "nome": "Em Fervente Oração CTP 218",
-      "arquivo": "Em Fervente Oração CTP 218.pdf"
+      "numero": "CTP 021",
+      "nome": "Ao Único Que É Digno CTP 021",
+      "arquivo": "Ao Único Que É Digno CTP 021.pdf"
     },
     {
-      "numero": "AVU 04",
-      "nome": "Tu és Soberano AVU 04",
-      "arquivo": "Tu és Soberano AVU 04.pdf"
+      "numero": "",
+      "nome": "",
+      "arquivo": ".pdf"
     },
     {
-      "numero": "CTP 22",
-      "nome": "(abraço da paz) Estamos Juntos, Prontos Para Adoração CTP 22",
-      "arquivo": "Estamos Juntos, Prontos Para Adoração CTP 22.pdf"
+      "numero": "",
+      "nome": "",
+      "arquivo": ".pdf"
     }
   ]
 }
