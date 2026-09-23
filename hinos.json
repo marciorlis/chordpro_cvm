@@ -31,6 +31,12 @@
   },
   {
     "hinario": "CTP",
+    "numero": 313,
+    "titulo": "A Tua Graça Alcançou-nos",
+    "arquivo": "A Tua Graça Alcançou-nos CTP 313.pdf"
+  },
+  {
+    "hinario": "CTP",
     "numero": 1,
     "titulo": "Adorai em majestade",
     "arquivo": "Adorai em majestade CTP 001.pdf"
@@ -112,6 +118,18 @@
     "numero": 487,
     "titulo": "Ao Que Está Sentado no Trono",
     "arquivo": "Ao Que Está Sentado no Trono CTP 487.pdf"
+  },
+  {
+    "hinario": "CTP",
+    "numero": 21,
+    "titulo": "Ao Único Que É Digno",
+    "arquivo": "Ao Único Que É Digno CTP 021.pdf"
+  },
+  {
+    "hinario": "AVU",
+    "numero": 18,
+    "titulo": "Ao Único Que É Digno - Louvor ao Rei",
+    "arquivo": "Ao Único Que É Digno - Louvor ao Rei AVU 18.pdf"
   },
   {
     "hinario": "",
@@ -256,6 +274,12 @@
     "numero": 232,
     "titulo": "Em tudo as tuas mãos",
     "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
+  },
+  {
+    "hinario": "CTP",
+    "numero": 16,
+    "titulo": "Estamos Aqui, Senhor",
+    "arquivo": "Estamos Aqui, Senhor CTP 016.pdf"
   },
   {
     "hinario": "CTP",
