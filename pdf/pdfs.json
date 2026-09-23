@@ -20,6 +20,11 @@
     "arquivo": "A Paz do Céu CTP 114.pdf"
   },
   {
+    "numero": "CTP 313",
+    "nome": "A Tua Graça Alcançou-nos",
+    "arquivo": "A Tua Graça Alcançou-nos CTP 313.pdf"
+  },
+  {
     "numero": "CTP 050",
     "nome": "A alegria está no coração",
     "arquivo": "A alegria está no coração CTP 050.pdf"
@@ -95,9 +100,14 @@
     "arquivo": "Ao orarmos, Senhor CTP 220.pdf"
   },
   {
-    "numero": "",
-    "nome": "Ao Único Que É Digno CTP 021 (B)",
-    "arquivo": "Ao Único Que É Digno CTP 021 (B).pdf"
+    "numero": "AVU 18",
+    "nome": "Ao Único Que É Digno - Louvor ao Rei",
+    "arquivo": "Ao Único Que É Digno - Louvor ao Rei AVU 18.pdf"
+  },
+  {
+    "numero": "CTP 021",
+    "nome": "Ao Único Que É Digno",
+    "arquivo": "Ao Único Que É Digno CTP 021.pdf"
   },
   {
     "numero": "",
@@ -213,6 +223,11 @@
     "numero": "CTP 232",
     "nome": "Em tudo as tuas mãos",
     "arquivo": "Em tudo as tuas mãos CTP 232.pdf"
+  },
+  {
+    "numero": "CTP 016",
+    "nome": "Estamos Aqui, Senhor",
+    "arquivo": "Estamos Aqui, Senhor CTP 016.pdf"
   },
   {
     "numero": "CTP 22",
