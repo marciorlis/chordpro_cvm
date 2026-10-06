@@ -1,0 +1,91 @@
+{title:Divino Companheiro}
+{Subtitle: }
+{album: AVU 20}
+{lyricist: }
+{composer: letra e música: Antonio Rivera}
+{lyricist: } 
+{meta revisao Rev. 0 - out/2026}
+#{textfont: CHELTEN}
+{chordfont: arial bold}
+{textsize: 12}
+{chordsize: 13}
+{titles: left}
+{chordcolour: black}
+{columns: 2}
+{columnspace: 25}
+{comment_box: compasso 3/4 | Tom: Mi maior}
+{comment: Intro}
+{transpose: 0}
+{start_of_grid shape="16" label="Intro"}
+| E . . | % . . | B7/D# . . |
+| E . . | B7 . . | E . . | A/B . . |
+{end_of_grid}
+# DEIXAR DUAS LINHAS ABAIXO EM BRANCO
+
+
+##{comment_italic: N.C. = Não toca acorde}
+##<span foreground="red"></span>
+{comment: Estrofe 1 Parte 1}
+{start_of_verse  cc="Verse1" label="Verse 1"}
+#<span foreground="red"></span>
+{textcolor: red}
+Di[E]vino companheiro no ca[B7/D#]minho,
+{textcolor:}
+sua pre[F#m]sença sinto [B7]logo ao transi[E]tar.
+Pois tu dissi[E7]paste toda [A]sombra; 
+{textcolor: red}
+já tenho [E]luz, a luz ben[B7]dita do a[E]mor.
+{textcolor:}
+{end_of_verse}
+
+
+
+{start_of_chorus}
+[B]Fica, Se[A]nhor, já se faz [E]tarde,
+[B]tens meu cora[A]ção para pou[E]sar.
+Faz em mim mo[E7]rada perma[A]nente,
+fica, Se[E]nhor, fica, Se[B7]nhor, meu salva[E]dor.
+{end_of_chorus}
+{column_break}
+## ----- espaçador após quebra de coluna 100mm se o grid tiver 2 linhas-----
+{start_of_svg: height="100mm"}
+<svg width="1mm" height="100mm" xmlns="http://w3.org">
+  <!-- Esse bloco não tem nenhuma linha desenhada, serve apenas como espaçador -->
+</svg>
+{end_of_svg}
+#
+#
+{comment: Estrofe 2 Parte 2}
+{start_of_verse  cc="Verse1" label="Verse 2"}
+A som[^]bra da noite se apro[^]xima,
+e [^]nela o tenta[^]dor vai che[^]gar.
+Não, ó não me [^]deixes só no ca[^]minho;__ 
+ajuda-[^]me, ajuda-[^]me, até che[^]gar.
+{end_of_verse}
+#
+#
+#
+
+
+
+## ----- icone de olho/alerta -----
+{start_of_svg: align="left"}
+<svg width="60mm" height="6mm" viewBox="0 0 60 6" xmlns="http://w3.org">
+  <!-- Desenho do Olho (Contorno Externo) -->
+  <path d="M 1 3 C 2.5 1.2, 4.5 1.2, 6 3 C 4.5 4.8, 2.5 4.8, 1 3 Z" fill="none" stroke="#D32F2F" stroke-width="0.5" />
+  <!-- Íris/Pupila (Círculo Interno) -->
+  <circle cx="3.5" cy="3" r="1" fill="#D32F2F" />
+  <!-- Linha contínua horizontal que sai do lado do olho -->
+  <line x1="8" y1="3" x2="60" y2="3" stroke="#D32F2F" stroke-width="0.3" />
+</svg>
+{end_of_svg}
+# -- texto das OBSERVAÇÕES --
+{suppress-empty-chords: true}
+{textfont: arial}
+<span size="85%" style="normal"><b>OBSERVAÇÕES</b>
+Intro = trecho texto em vermelho
+</span>
+{suppress-empty-chords: false}
+#
+#
+{image: src="cvm_10.png" anchor="page" x="450" y="600" opacity="0.8" scale="40%"}
