@@ -282,6 +282,12 @@
     "arquivo": "Ele É Exaltado AVU 02.pdf"
   },
   {
+    "hinario": "",
+    "numero": 0,
+    "titulo": "Ele É Exaltado AVU02",
+    "arquivo": "Ele É Exaltado AVU02.pdf"
+  },
+  {
     "hinario": "CTP",
     "numero": 218,
     "titulo": "Em Fervente Oração",
@@ -634,6 +640,12 @@
     "numero": 12,
     "titulo": "Tocou-me",
     "arquivo": "Tocou-me  HC 12.pdf"
+  },
+  {
+    "hinario": "AVU",
+    "numero": 22,
+    "titulo": "Toma o meu coração",
+    "arquivo": "Toma o meu coração AVU 22.pdf"
   },
   {
     "hinario": "CTP",
