@@ -230,6 +230,11 @@
     "arquivo": "Ele É Exaltado AVU 02.pdf"
   },
   {
+    "numero": "AVU02",
+    "nome": "Ele É Exaltado",
+    "arquivo": "Ele É Exaltado AVU02.pdf"
+  },
+  {
     "numero": "CTP 218",
     "nome": "Em Fervente Oração",
     "arquivo": "Em Fervente Oração CTP 218.pdf"
@@ -285,6 +290,11 @@
     "arquivo": "Glória pra sempre CTP 065.pdf"
   },
   {
+    "numero": "CTP 088",
+    "nome": "Grande É o Senhor",
+    "arquivo": "Grande É o Senhor CTP 088.pdf"
+  },
+  {
     "numero": "CTP 094",
     "nome": "Grandioso és tu",
     "arquivo": "Grandioso és tu CTP 094.pdf"
@@ -328,6 +338,16 @@
     "numero": "AVU 14",
     "nome": "Meu Jesus Salvador (Aclame ao Senhor)",
     "arquivo": "Meu Jesus Salvador (Aclame ao Senhor) AVU 14.pdf"
+  },
+  {
+    "numero": "AVU 23",
+    "nome": "Meu Prazer (Em Espírito, Em Verdade)",
+    "arquivo": "Meu Prazer (Em Espírito, Em Verdade) AVU 23.pdf"
+  },
+  {
+    "numero": "HC 39",
+    "nome": "Nada Sei Sobre o Futuro",
+    "arquivo": "Nada Sei Sobre o Futuro HC 39.pdf"
   },
   {
     "numero": "HC 10",
@@ -518,6 +538,11 @@
     "numero": "HC 12",
     "nome": "Tocou-me",
     "arquivo": "Tocou-me  HC 12.pdf"
+  },
+  {
+    "numero": "AVU 22",
+    "nome": "Toma o meu coração",
+    "arquivo": "Toma o meu coração AVU 22.pdf"
   },
   {
     "numero": "CTP 063",
