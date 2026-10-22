@@ -361,6 +361,12 @@
   },
   {
     "hinario": "CTP",
+    "numero": 88,
+    "titulo": "Grande É o Senhor",
+    "arquivo": "Grande É o Senhor CTP 088.pdf"
+  },
+  {
+    "hinario": "CTP",
     "numero": 94,
     "titulo": "Grandioso és tu",
     "arquivo": "Grandioso és tu CTP 094.pdf"
@@ -408,10 +414,22 @@
     "arquivo": "Meu Jesus Salvador (Aclame ao Senhor) AVU 14.pdf"
   },
   {
+    "hinario": "AVU",
+    "numero": 23,
+    "titulo": "Meu Prazer (Em Espírito, Em Verdade)",
+    "arquivo": "Meu Prazer (Em Espírito, Em Verdade) AVU 23.pdf"
+  },
+  {
     "hinario": "HC",
     "numero": 10,
     "titulo": "Nada é Impossível",
     "arquivo": "Nada é Impossível HC 10.pdf"
+  },
+  {
+    "hinario": "HC",
+    "numero": 39,
+    "titulo": "Nada Sei Sobre o Futuro",
+    "arquivo": "Nada Sei Sobre o Futuro HC 39.pdf"
   },
   {
     "hinario": "CTP",
