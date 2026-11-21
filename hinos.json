@@ -348,6 +348,12 @@
     "arquivo": "Eu, devoto, ó Deus, te adoro HC 37.pdf"
   },
   {
+    "hinario": "HC",
+    "numero": 13,
+    "titulo": "Falar com Deus",
+    "arquivo": "Falar com Deus HC 13.pdf"
+  },
+  {
     "hinario": "AVU",
     "numero": 19,
     "titulo": "Faz Chover (Assim como a corça)",
@@ -640,6 +646,12 @@
     "numero": 41,
     "titulo": "Se Confessarmos",
     "arquivo": "Se Confessarmos CTP 041.pdf"
+  },
+  {
+    "hinario": "CTP",
+    "numero": 76,
+    "titulo": "Sê engrandecido",
+    "arquivo": "Sê engrandecido CTP 076.pdf"
   },
   {
     "hinario": "CTP",
